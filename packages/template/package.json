@@ -1,0 +1,44 @@
+{
+  "name": "@reactseed/template",
+  "version": "0.0.6",
+  "description": "React seed template for creating react app",
+  "scripts": {
+    "commit": "git cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactseed/template.git"
+  },
+  "homepage": "https://github.com/reactseed/template",
+  "bugs": {
+    "url": "https://github.com/reactseed/template/issues"
+  },
+  "keywords": [
+    "template",
+    "reactseed"
+  ],
+  "license": "BSD",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2"
+  },
+  "pre-commit": "lint-staged",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose --no-verify"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 [![npm version](https://img.shields.io/npm/v/@reactseed/devserver.svg?style=flat)](https://www.npmjs.com/package/@reactseed/devserver)
 
 # `@reactseed/devserver`
-Override webpack devServer configuration for create-react-app 2.0.
+Override webpack devServer configuration for create-react-app 2.0 order to support mockserver.
 
 - [How to install](#how-to-install)
 - [Usage](#usage)

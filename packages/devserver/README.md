@@ -1,11 +1,14 @@
 [![npm version](https://img.shields.io/npm/v/@reactseed/devserver.svg?style=flat)](https://www.npmjs.com/package/@reactseed/devserver)
 
 # `@reactseed/devserver`
-Override webpack devServer configuration for create-react-app 2.0 order to support mockserver.
+Override webpack devServer configuration for create-react-app 2.0 order to support mockServer.
 
 - [How to install](#how-to-install)
 - [Usage](#usage)
-
+ - [Configure customize-cra](#configure-customize-cra)
+ - [Conventional Mock file](#conventional-mock-file)
+ - [Write Mock files](#write-mock-files)
+ 
 ## How to install
 
 This project relies on [`react-app-rewired`](https://github.com/timarney/react-app-rewired/)、[`customize-cra`](https://github.com/arackaf/customize-cra). You'll need to install that in order for `@reactseed/devserver` to work.

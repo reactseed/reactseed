@@ -1,11 +1,11 @@
-#`@reactseed/template`
+# `@reactseed/template`
 
 [![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url]
 
 [npm-image]: https://img.shields.io/npm/v/@reactseed/template.svg
 [npm-url]: https://www.npmjs.com/package/@reactseed/template
 [LICENSE-image]:https://img.shields.io/badge/license-BSD-blue.svg
-[LICENSE-url]: https://github.com/gatsbyjs/gatsby/blob/master/LICENSE
+[LICENSE-url]: https://github.com/reactseed/template/blob/master/LICENSE
 
 Default template for the React Seed.
 ## 🚀 Quick start

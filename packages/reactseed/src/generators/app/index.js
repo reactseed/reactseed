@@ -119,6 +119,11 @@ module.exports = class extends Generator {
             name: 'Defalut Template',
             checked: true,
           },
+          {
+            value: 'antd',
+            name: 'Ant Design Template',
+            checked: true,
+          },
         ],
       },
       {

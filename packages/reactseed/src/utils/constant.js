@@ -1,5 +1,6 @@
 const templateMap = {
   default: '@reactseed/template',
+  antd: '@reactseed/template-antd',
 };
 
 const registry = 'https://registry.npmjs.org';

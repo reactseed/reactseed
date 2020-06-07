@@ -1,0 +1,46 @@
+{
+  "name": "@reactseed/template-antd",
+  "version": "0.0.1",
+  "description": "React seed ant design template for creating react app",
+  "scripts": {
+    "commit": "git cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactseed/antd-template.git"
+  },
+  "homepage": "https://github.com/reactseed/antd-template",
+  "bugs": {
+    "url": "https://github.com/reactseed/antd-template/issues"
+  },
+  "keywords": [
+    "template",
+    "antd",
+    "react",
+    "reactseed"
+  ],
+  "license": "BSD",
+  "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2"
+  },
+  "pre-commit": "lint-staged",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose --no-verify"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

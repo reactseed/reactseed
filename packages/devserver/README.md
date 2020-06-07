@@ -1,6 +1,16 @@
-[![npm version](https://img.shields.io/npm/v/@reactseed/devserver.svg?style=flat)](https://www.npmjs.com/package/@reactseed/devserver)
-
 # `@reactseed/devserver`
+
+[![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url] [![download-image]][download-url]
+
+[LICENSE-image]:https://img.shields.io/badge/license-BSD-blue.svg
+[LICENSE-url]: https://github.com/reactseed/devserver/blob/master/LICENSE
+
+[npm-image]: https://img.shields.io/npm/v/@reactseed/devserver.svg
+[npm-url]: https://www.npmjs.com/package/@reactseed/devserver
+
+[download-image]: https://img.shields.io/npm/dm/@reactseed/devserver.svg?style=flat-square
+[download-url]:  https://www.npmjs.com/package/@reactseed/devserver
+
 Override webpack devServer configuration for create-react-app 2.0 order to support mockServer.
 
 - [How to install](#how-to-install)

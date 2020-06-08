@@ -16,6 +16,10 @@ const menus: Route[] = [
     key: '/other',
     children: [
       {
+        path: '/hello',
+        name: 'Hello (useRedux)',
+      },
+      {
         path: '/user',
         name: 'User (useRequest)',
       },

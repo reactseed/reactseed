@@ -7,6 +7,10 @@ const routes: RouteProps[] = [
     exact: true,
   },
   {
+    path: '/User',
+    component: () => import('@/pages/User'),
+  },
+  {
     path: '/simple',
     component: () => import('@/pages/Simple'),
   },

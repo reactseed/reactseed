@@ -16,12 +16,16 @@ const menus: Route[] = [
     key: '/other',
     children: [
       {
+        path: '/user',
+        name: 'User (useRequest)',
+      },
+      {
         path: '/simple',
         name: 'Simple',
       },
       {
         path: '/simple2',
-        name: 'Simple2',
+        name: 'Not found',
       },
     ],
   },

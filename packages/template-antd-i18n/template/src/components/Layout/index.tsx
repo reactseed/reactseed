@@ -22,7 +22,6 @@ const BasicLayout: React.FC = props => {
   useEffect(() => {
     const select = breadcrumbMap.get(pathname);
     if (select) {
-      console.log(breadcrumbMap);
       setOpenKeys((select as MenuDataItem)['pro_layout_parentKeys']);
       setSelectedKeys([(select as MenuDataItem)['key'] as string]);
     }

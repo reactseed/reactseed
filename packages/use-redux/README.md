@@ -24,9 +24,9 @@
 ## Installation
 
 ```sh
-npm install immer redux react-redux
+npm install @reactseed/use-redux immer redux react-redux
 # or
-yarn add immer redux react-redux
+yarn add @reactseed/use-redux immer redux react-redux
 ```
 ## API
 

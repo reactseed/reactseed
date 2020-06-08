@@ -54,14 +54,24 @@ const UserPage: React.FC = () => {
   });
 
   return (
-    <Table
-      columns={columns}
-      rowKey={record => record.login.uuid}
-      dataSource={data?.list}
-      // useRequest returns that pagination and table's pagination parameter types are not compatible
-      pagination={pagination as TablePaginationConfig}
-      loading={loading}
-    />
+    <>
+      <p style={{ marginBottom: 16 }}>
+        This is an example using <b>useRequest</b>，See the section about
+        <a href="https://github.com/reactseed/use-request">
+          @reactseed/use-request
+        </a>
+        for more information.
+      </p>
+
+      <Table
+        columns={columns}
+        rowKey={record => record.login.uuid}
+        dataSource={data?.list}
+        // useRequest returns that pagination and table's pagination parameter types are not compatible
+        pagination={pagination as TablePaginationConfig}
+        loading={loading}
+      />
+    </>
   );
 };
 

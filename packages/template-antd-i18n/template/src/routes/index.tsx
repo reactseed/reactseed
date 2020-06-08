@@ -7,12 +7,16 @@ const routes: RouteProps[] = [
     exact: true,
   },
   {
-    path: '/User',
-    component: () => import('@/pages/User'),
+    path: '/hello',
+    component: () => import('@/pages/Other/Hello'),
+  },
+  {
+    path: '/user',
+    component: () => import('@/pages/Other/User'),
   },
   {
     path: '/simple',
-    component: () => import('@/pages/Simple'),
+    component: () => import('@/pages/Other/Simple'),
   },
   {
     component: () => import('@/pages/NotFound'),

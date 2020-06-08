@@ -25,7 +25,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     }),
     fixBabelImports('antd', {
-      libraryDirectory: 'es',
+      libraryDirectory: 'lib',
       style: 'css',
     }),
     addWebpackPlugin(

@@ -7,7 +7,10 @@ const Home: React.FC = () => {
   return (
     <div className="home__container">
       <div>React Seed</div>
-      <div style={{ color: 'blue' }} onClick={() => history.push('simple')}>
+      <div
+        style={{ color: 'blue', cursor: 'pointer' }}
+        onClick={() => history.push('simple')}
+      >
         Go Simple
       </div>
     </div>

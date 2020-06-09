@@ -36,11 +36,11 @@ const Hello: React.FC = () => {
   return (
     <>
       <p style={{ marginBottom: 16 }}>
-        This is an example using <b>useRedux</b>，See the section about
+        This is an example using <b>useRedux</b>，See the section about&nbsp;
         <a href="https://github.com/reactseed/use-redux">
           @reactseed/use-redux
         </a>
-        for more information.
+        &nbsp; for more information.
       </p>
 
       <h1>

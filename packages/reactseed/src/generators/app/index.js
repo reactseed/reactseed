@@ -15,7 +15,9 @@ const urllib = require('urllib');
 const chalk = require('chalk');
 
 const { logger } = require('../../utils/index');
-const { templateMap } = require('../../utils/constant');
+const { templateMap, templateList } = require('../../utils/constant');
+const npm = require('../../utils/npm');
+const yarn = require('../../utils/yarn');
 const {
   isNeedReplaceContentFile,
   getRegistryType,
@@ -58,17 +60,19 @@ module.exports = class extends Generator {
 
   async prompting() {
     logger.info(`Welcome to the React Seed!`);
+    console.log(process.cwd());
     const answers = await this.prompt([
       {
         type: 'input',
         name: 'appName',
-        message: 'Your project name(Default to current folder name)',
+        message: 'Your project name? (Default to current folder name)',
         default: '',
       },
     ]);
     this.answers = answers;
     logger.debug('appName: ', answers.appName);
     if (answers.appName === '') {
+      this.isCurrentDir = true;
       answers.appName = cwdName;
       // Check if there are already package.json in the current directory
       const isExist = await fs.pathExists(
@@ -112,25 +116,14 @@ module.exports = class extends Generator {
       {
         type: 'list',
         name: 'template',
-        message: 'The template you want to use.',
-        choices: [
-          {
-            value: 'default',
-            name: 'Defalut Template',
-            checked: true,
-          },
-          {
-            value: 'antd',
-            name: 'Ant Design Template',
-            checked: true,
-          },
-        ],
+        message: 'The template you want to use?',
+        choices: templateList,
       },
       {
         type: 'confirm',
         name: 'install',
         message: 'Whether to install dependencies?',
-        default: false,
+        default: true,
       },
       {
         type: 'confirm',
@@ -233,28 +226,30 @@ module.exports = class extends Generator {
       });
   }
 
-  install() {
+  async install() {
     const { useYarn, install } = this.data;
     this.isInstallSuccess = true;
-    return Promise.resolve()
-      .then(() => {
-        if (install) {
-          if (!useYarn) {
-            logger.info('Installing dependencies using NPM...');
-            return this.npmInstall();
-          }
+    const appPath = this.targetDir;
+
+    try {
+      if (install) {
+        if (!useYarn) {
+          logger.info('Installing dependencies using NPM...');
+          await npm.run(appPath, 'install');
+        } else {
           logger.info('Installing dependencies using Yarn...');
-          return this.yarnInstall();
+          await yarn.run(appPath, 'install');
         }
-      })
-      .catch((error) => {
-        this.isInstallSuccess = false;
-        logger.error('Error installing dependencies:', error && error.message);
-        return Promise.reject(error);
-      });
+      }
+    } catch (error) {
+      this.isInstallSuccess = false;
+      logger.error('Error installing dependencies:', error && error.message);
+    }
   }
 
   async end() {
+    const { useYarn } = this.data;
+
     if (this.isInstallSuccess === false) {
       logger.error('Installation dependency failed, please install manually!');
       return;
@@ -268,8 +263,10 @@ module.exports = class extends Generator {
       )}`
     );
     logger.info('We suggest that you begin by typing:');
-    logger.info(`  ${chalk.cyan(`cd ${this.answers.appName}`)}`);
-    logger.info(`  ${chalk.cyan('yarn start')}`);
+    if (!this.isCurrentDir) {
+      logger.info(`  ${chalk.cyan(`cd ${this.answers.appName}`)}`);
+    }
+    logger.info(`  ${chalk.cyan(`${useYarn ? 'yarn' : 'npm'} start`)}`);
     logger.info('\n');
   }
 };

@@ -19,7 +19,12 @@ module.exports = {
   webpack: override(
     addBabelPlugin('react-hot-loader/babel'),
     addLessLoader({
-      javascriptEnabled: true,
+      lessOptions: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'primary-color': '#006EFF',
+        },
+      },
     }),
     addWebpackAlias({
       '@': path.resolve(__dirname, 'src'),

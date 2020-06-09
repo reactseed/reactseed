@@ -1,18 +1,34 @@
 import React from 'react';
-import { useHistory } from '@/hooks';
+import { useHistory } from 'react-router-dom';
+import styles from './index.module.less';
 import './index.less';
 
 const Home: React.FC = () => {
   const history = useHistory();
   return (
-    <div className="home__container">
-      <div>React Seed</div>
-      <div
-        style={{ color: 'blue', cursor: 'pointer' }}
-        onClick={() => history.push('simple')}
-      >
-        Go Simple
-      </div>
+    <div className={styles.container}>
+      <h1>Welcome to React Seed</h1>
+      <ul>
+        <li>
+          Edit <code>src/pages/Home/index.tsx</code> and save to reload.
+        </li>
+        <li>
+          Click go to &nbsp;
+          <span className="link" onClick={() => history.push('simple')}>
+            Simple Page
+          </span>
+        </li>
+        <li>
+          <a
+            className="link"
+            href="https://github.com/reactseed/reactseed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React Seed
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

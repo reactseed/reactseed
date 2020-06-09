@@ -11,7 +11,9 @@ const {
 module.exports = {
   webpack: override(
     addLessLoader({
-      javascriptEnabled: true,
+      lessOptions: {
+        javascriptEnabled: true,
+      },
     }),
     addWebpackAlias({
       '@': path.resolve(__dirname, 'src'),

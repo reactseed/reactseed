@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "less-loader": "^6.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
@@ -69,7 +70,7 @@
     "@types/react-router-dom": "^5.1.5",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
-    "customize-cra": "^0.9.1",
+    "customize-cra": "^1.0.0-alpha.0",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
@@ -79,7 +80,6 @@
     "http-proxy-middleware": "^1.0.1",
     "husky": "^4.2.5",
     "less": "^3.11.1",
-    "less-loader": "^5.0.0",
     "lint-staged": "^10.2.2",
     "prettier": "^1.19.1",
     "react-app-rewired": "^2.1.5",

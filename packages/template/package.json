@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/template",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "React seed template for creating react app",
   "scripts": {
     "commit": "git cz"

@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Automated Version Bump
+      uses: phips28/gh-action-bump-version@v7.1.0
     - uses: actions/setup-node@v1.4.2
       with:
         node-version: 12

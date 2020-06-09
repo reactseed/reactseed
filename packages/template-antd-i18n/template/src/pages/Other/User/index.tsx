@@ -56,11 +56,11 @@ const UserPage: React.FC = () => {
   return (
     <>
       <p style={{ marginBottom: 16 }}>
-        This is an example using <b>useRequest</b>，See the section about
+        This is an example using <b>useRequest</b>，See the section about&nbsp;
         <a href="https://github.com/reactseed/use-request">
           @reactseed/use-request
         </a>
-        for more information.
+        &nbsp;for more information.
       </p>
 
       <Table

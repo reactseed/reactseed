@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import ProBasicLayout, {
   SettingDrawer,
   getMenuData,
@@ -8,9 +8,16 @@ import ProBasicLayout, {
 import { Link } from 'react-router-dom';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
-import { menus } from '@/configs';
+import { menus, menuIcon } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import './index.css';
+
+const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
+  menus.map(({ icon, children, ...item }) => ({
+    ...item,
+    icon: icon && menuIcon[icon as string],
+    children: children && renderMenuItem(children),
+  }));
 
 const BasicLayout: React.FC = props => {
   const location = useLocation();
@@ -31,23 +38,34 @@ const BasicLayout: React.FC = props => {
     }
   }, [breadcrumbMap, pathname]);
 
+  const menuDataRender = useCallback(() => renderMenuItem(menuData), [
+    menuData,
+  ]);
+
+  const menuItemRender = useCallback((menuItemProps, defaultDom) => {
+    if (menuItemProps.isUrl || !menuItemProps.path) {
+      return defaultDom;
+    }
+    return <Link to={menuItemProps.path}>{defaultDom}</Link>;
+  }, []);
+
+  const menuProps = useMemo(
+    () => ({
+      selectedKeys,
+      openKeys,
+      onOpenChange: setOpenKeys,
+    }),
+    [openKeys, selectedKeys]
+  );
+
   return (
     <>
       <ProBasicLayout
         title="React Seed"
         logo="logo192.png"
-        menuDataRender={() => menuData}
-        menuItemRender={(menuItemProps, defaultDom) => {
-          if (menuItemProps.isUrl || !menuItemProps.path) {
-            return defaultDom;
-          }
-          return <Link to={menuItemProps.path}>{defaultDom}</Link>;
-        }}
-        menuProps={{
-          selectedKeys,
-          openKeys,
-          onOpenChange: setOpenKeys,
-        }}
+        menuDataRender={menuDataRender}
+        menuItemRender={menuItemRender}
+        menuProps={menuProps}
         {...settings}
       >
         {props.children}

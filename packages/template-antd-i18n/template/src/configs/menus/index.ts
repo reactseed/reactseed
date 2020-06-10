@@ -10,10 +10,12 @@ const menus: Route[] = [
   {
     path: '/',
     name: 'Home',
+    icon: 'home',
   },
   {
     name: 'Other',
     key: '/other',
+    icon: 'other',
     children: [
       {
         path: '/hello',

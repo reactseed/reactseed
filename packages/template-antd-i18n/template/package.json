@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "@ant-design/pro-layout": "^5.0.12",
     "@reactseed/use-redux": "^0.0.3",
     "@reactseed/use-request": "^0.0.2",

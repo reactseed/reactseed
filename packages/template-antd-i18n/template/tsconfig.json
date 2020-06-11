@@ -1,14 +1,15 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "typeRoots": [
-      "./typings"
-    ],
+    "typeRoots": ["./typings"],
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "esnext.intl",
+      "es2017.intl",
+      "es2018.intl"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,11 +24,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "exclude": [
-    "build",
-    "node_modules"
-  ],
-  "include": [
-    "src"
-  ]
+  "exclude": ["build", "node_modules"],
+  "include": ["src"]
 }

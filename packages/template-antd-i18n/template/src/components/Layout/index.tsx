@@ -1,15 +1,24 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+  useContext,
+} from 'react';
 import ProBasicLayout, {
   SettingDrawer,
   getMenuData,
   MenuDataItem,
   SettingDrawerProps,
 } from '@ant-design/pro-layout';
+import { Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
-import { menus, menuIcon } from '@/configs';
+import { menus, menuIcon, language, languages } from '@/configs';
 import defaultSettings from '@/defaultSettings';
+import { ConfigContext } from '@/utils/context';
+import styles from './index.module.less';
 import './index.css';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
@@ -29,6 +38,8 @@ const BasicLayout: React.FC = props => {
   const isDev = isDevelopEnv();
   const { pathname } = location;
   const { breadcrumbMap, menuData } = useMemo(() => getMenuData(menus), []);
+  const { locale, setLocale } = useContext(ConfigContext);
+  const currentLanguage = language[locale];
 
   useEffect(() => {
     const select = breadcrumbMap.get(pathname);
@@ -58,6 +69,26 @@ const BasicLayout: React.FC = props => {
     [openKeys, selectedKeys]
   );
 
+  const rightContentRender = () => (
+    <Dropdown
+      overlay={
+        <Menu>
+          {languages.map(item => (
+            <Menu.Item key={item.key} onClick={() => setLocale(item.key)}>
+              <span className={styles.headerFlag}>{item.flag}</span>
+              {item.value}
+            </Menu.Item>
+          ))}
+        </Menu>
+      }
+    >
+      <div className={styles.headerButton}>
+        <span className={styles.headerFlag}>{currentLanguage.flag}</span>
+        {currentLanguage.value}
+      </div>
+    </Dropdown>
+  );
+
   return (
     <>
       <ProBasicLayout
@@ -66,6 +97,7 @@ const BasicLayout: React.FC = props => {
         menuDataRender={menuDataRender}
         menuItemRender={menuItemRender}
         menuProps={menuProps}
+        rightContentRender={rightContentRender}
         {...settings}
       >
         {props.children}

@@ -19,10 +19,12 @@ const Home: React.FC = () => {
           </Trans>
         </li>
         <li>
-          Click go to &nbsp;
-          <span className="link" onClick={() => history.push('simple')}>
-            Simple Page
-          </span>
+          <Trans>
+            Click go to &nbsp;
+            <span className="link" onClick={() => history.push('simple')}>
+              Simple Page
+            </span>
+          </Trans>
         </li>
         <li>
           <a
@@ -31,7 +33,7 @@ const Home: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React Seed
+            <Trans>Learn React Seed</Trans>
           </a>
         </li>
       </ul>

@@ -26,6 +26,10 @@ const menus: Route[] = [
         name: 'User (useRequest)',
       },
       {
+        path: '/i18n',
+        name: 'i18n (useLingui)',
+      },
+      {
         path: '/simple',
         name: 'Simple',
       },

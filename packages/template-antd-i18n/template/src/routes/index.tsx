@@ -19,6 +19,10 @@ const routes: RouteProps[] = [
     component: () => import('@/pages/Other/Simple'),
   },
   {
+    path: '/i18n',
+    component: () => import('@/pages/Other/I18N'),
+  },
+  {
     component: () => import('@/pages/NotFound'),
   },
 ];

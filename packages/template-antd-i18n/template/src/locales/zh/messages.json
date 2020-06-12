@@ -1,4 +1,19 @@
 {
+  "i18n.doc1": "1、使用 Tans 组件将需要翻译的文字包裹起来。",
+  "i18n.doc2": "2、Trans 支持翻译的文字带有变量。",
+  "i18n.doc3": "3、Trans 也支持翻译的文字带有组件，甚至嵌套多层的组件。",
+  "i18n.doc4": "4、定义在 JS 内的文字，无法使用 Tans 组件，常见场景常见如：Toast 一条信息，Input 的 placeholder 属性。",
+  "i18n.doc5": "5、这种方式也支持同样的 ICU MessageFormat 语法，支持带有变量",
+  "i18n.doc6": "除了这两种常见的形式，lingui 支持其他复杂的组件。下例是复数语法的情况。如: Plural | Select | SelectOrdinal | date | number, <0>查看更多</0>。支持 Plural 需要额外的配置，<1>查看更多</1>。",
+  "i18n.doc7": "7、通常情况下，我们无需定义字段的ID，使用命令行 npm run extract 可以从代码中自动提取 Tans 等文案，文案内容即是字段名称。",
+  "Click go to &nbsp;<0>Simple Page</0>": "点击进入 <0>Simple Page</0>",
   "Edit <0>src/pages/Home/index.tsx</0> and save to reload": "编辑并保存 <0>src/pages/Home/index.tsx</0> 文件以重新加载",
-  "Welcome to React Seed": "欢迎使用 React Seed"
+  "Hello, React Seed": "你好，React Seed",
+  "Hello, {name}": "你好, {name}",
+  "Learn React Seed": "了解 React Seed",
+  "This is a text defined in JS": "这是一条定义在 JS 内的文字",
+  "This is a text defined in JS, {name}": "这是一条定义在 JS 内的文字，{name}",
+  "View <0>More</0>": "查看 <0>更多</0>",
+  "Welcome to React Seed": "欢迎使用 React Seed",
+  "custom.id": "这段文字定义了ID： custom.id"
 }

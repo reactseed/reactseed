@@ -101,6 +101,7 @@ const I18N: React.FC = () => {
           {i18n.date(date, {
             hour12: false,
           })}
+
           {i18n.number(number, {
             currency: '$',
           })}

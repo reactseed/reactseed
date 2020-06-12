@@ -1,19 +1,20 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { useIntl } from '@/hooks';
+import { FormattedMessage } from 'react-intl';
 import styles from './index.module.less';
 import './index.less';
 
 const Home: React.FC = () => {
   const history = useHistory();
-  const { formatMessage: f } = useIntl();
 
   return (
     <div className={styles.container}>
-      <h1>{f({ id: 'welcome', defaultMessage: 'Welcome to React Seed' })}</h1>
+      <h1>
+        <FormattedMessage id="welcome" defaultMessage="Welcome to React Seed" />
+      </h1>
       <ul>
         <li>
-          Edit <code>src/pages/Home/index.tsx</code> and save to reload.
+          Edit <code>src/pages/Home/index.tsx</code> and save to reload
         </li>
         <li>
           Click go to &nbsp;

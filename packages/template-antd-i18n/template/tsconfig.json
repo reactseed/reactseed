@@ -1,7 +1,9 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "typeRoots": ["./typings"],
+    "typeRoots": [
+      "./typings"
+    ],
     "target": "es5",
     "lib": [
       "dom",
@@ -24,6 +26,11 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "exclude": ["build", "node_modules"],
-  "include": ["src"]
+  "exclude": [
+    "build",
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ]
 }

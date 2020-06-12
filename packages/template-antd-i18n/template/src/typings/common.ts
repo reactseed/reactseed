@@ -1,8 +1,8 @@
 export type TSupportedLocales = 'en' | 'zh';
 
 export interface TConfigContext {
-  locale: TSupportedLocales;
-  setLocale: (locale: TSupportedLocales) => void;
+  language: TSupportedLocales;
+  setLanguage: (language: TSupportedLocales) => void;
 }
 
 export interface TLanguageItem {

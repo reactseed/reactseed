@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { Trans } from '@lingui/macro';
 import styles from './index.module.less';
 import './index.less';
 
@@ -10,11 +10,13 @@ const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <h1>
-        <FormattedMessage id="welcome" defaultMessage="Welcome to React Seed" />
+        <Trans>Welcome to React Seed</Trans>
       </h1>
       <ul>
         <li>
-          Edit <code>src/pages/Home/index.tsx</code> and save to reload
+          <Trans>
+            Edit <code>src/pages/Home/index.tsx</code> and save to reload
+          </Trans>
         </li>
         <li>
           Click go to &nbsp;

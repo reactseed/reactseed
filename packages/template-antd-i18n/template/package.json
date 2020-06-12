@@ -5,13 +5,14 @@
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "@ant-design/pro-layout": "^5.0.12",
+    "@lingui/core": "^3.0.0-13",
+    "@lingui/react": "^3.0.0-13",
     "@reactseed/use-redux": "^0.0.3",
     "@reactseed/use-request": "^0.0.2",
     "antd": "^4.2.2",
     "immer": "^6.0.9",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "react-intl": "^4.6.9",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5"
@@ -25,7 +26,9 @@
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "eslint": "eslint --fix --no-error-on-unmatched-pattern 'src/**/*.{ts,tsx}'",
     "stylelint": "stylelint 'src/**/*.less' --syntax less --allow-empty-input",
-    "extra": "formatjs extract 'src/**/*.{ts,tsx}' --out-file 'src/locales/index.json'"
+    "extract": "lingui extract",
+    "extract:clean": "lingui extract --clean",
+    "compile": "lingui compile --format minimal"
   },
   "browserslist": {
     "production": [
@@ -70,6 +73,9 @@
     "@commitlint/config-conventional": "^8.3.4",
     "@formatjs/cli": "^1.7.5",
     "@hot-loader/react-dom": "=16.13.0",
+    "@lingui/babel-preset-react": "^2.2.0-11",
+    "@lingui/cli": "^3.0.0-13",
+    "@lingui/macro": "^3.0.0-13",
     "@reactseed/devserver": "^0.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -106,5 +112,22 @@
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "typescript": "~3.8.3"
+  },
+  "lingui": {
+    "locales": [
+      "en",
+      "zh"
+    ],
+    "sourceLocale": "en",
+    "catalogs": [{
+      "path": "src/locales/{locale}/messages",
+      "include": [
+        "src"
+      ],
+      "exclude": [
+        "**/node_modules/**"
+      ]
+    }],
+    "format": "minimal"
   }
 }

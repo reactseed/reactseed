@@ -38,7 +38,7 @@ const BasicLayout: React.FC = props => {
   const isDev = isDevelopEnv();
   const { pathname } = location;
   const { breadcrumbMap, menuData } = useMemo(() => getMenuData(menus), []);
-  const { locale, setLocale } = useContext(ConfigContext);
+  const { language: locale, setLanguage } = useContext(ConfigContext);
   const currentLanguage = language[locale];
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const BasicLayout: React.FC = props => {
       overlay={
         <Menu>
           {languages.map(item => (
-            <Menu.Item key={item.key} onClick={() => setLocale(item.key)}>
+            <Menu.Item key={item.key} onClick={() => setLanguage(item.key)}>
               <span className={styles.headerFlag}>{item.flag}</span>
               {item.value}
             </Menu.Item>

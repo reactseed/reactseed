@@ -11,12 +11,14 @@ const {
   addWebpackPlugin,
   fixBabelImports,
   addBabelPlugin,
+  addBabelPreset,
 } = require('customize-cra');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const nodeModules = pkg => path.resolve(nodeModulesPath, pkg);
 
 module.exports = {
   webpack: override(
+    addBabelPreset('@lingui/babel-preset-react'),
     addBabelPlugin('react-hot-loader/babel'),
     addLessLoader({
       lessOptions: {

@@ -1,24 +1,23 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { PageLoading } from '@ant-design/pro-layout';
-import { IntlProvider } from 'react-intl';
 import { hot } from 'react-hot-loader/root';
 import { Layout } from '@/components';
-import { useIntlProvider } from '@/hooks';
 import routes from '@/routes';
+import { useIntlProvider } from '@/hooks';
 import { ConfigContext } from '@/utils/context';
-import { TConfigContext } from '@/typings';
+import { I18nProvider } from '@lingui/react';
 
 const App: React.FC = () => {
-  const { locale, setLocale, messages } = useIntlProvider();
-  const globalValue = {
-    locale,
-    setLocale: setLocale as TConfigContext['setLocale'],
+  const { language, setLanguage, i18n } = useIntlProvider();
+  const globalConfig = {
+    language,
+    setLanguage,
   };
 
   return (
-    <IntlProvider messages={messages} locale={locale}>
-      <ConfigContext.Provider value={globalValue}>
+    <ConfigContext.Provider value={globalConfig}>
+      <I18nProvider i18n={i18n}>
         <Router>
           <Layout>
             <Suspense fallback={<PageLoading />}>
@@ -37,8 +36,8 @@ const App: React.FC = () => {
             </Suspense>
           </Layout>
         </Router>
-      </ConfigContext.Provider>
-    </IntlProvider>
+      </I18nProvider>
+    </ConfigContext.Provider>
   );
 };
 

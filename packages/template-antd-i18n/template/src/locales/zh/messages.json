@@ -1,3 +1,4 @@
 {
-  "welcome": "欢迎使用 React Seed"
+  "Edit <0>src/pages/Home/index.tsx</0> and save to reload": "编辑并保存 <0>src/pages/Home/index.tsx</0> 文件以重新加载",
+  "Welcome to React Seed": "欢迎使用 React Seed"
 }

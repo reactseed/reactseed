@@ -1,22 +1,23 @@
 {
-  "name": "@reactseed/template-antd",
+  "name": "@reactseed/template-antd-i18n",
   "version": "0.1.2",
-  "description": "React seed ant design template for creating react app",
+  "description": "React seed ant design and i18n template for creating react app",
   "scripts": {
     "commit": "git cz"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactseed/antd-template.git"
+    "url": "https://github.com/reactseed/template-antd-i18n.git"
   },
-  "homepage": "https://github.com/reactseed/antd-template",
+  "homepage": "https://github.com/reactseed/template-antd-i18n",
   "bugs": {
-    "url": "https://github.com/reactseed/antd-template/issues"
+    "url": "https://github.com/reactseed/template-antd-i18n/issues"
   },
   "keywords": [
     "template",
     "antd",
     "react",
+    "i18n",
     "reactseed"
   ],
   "license": "BSD",

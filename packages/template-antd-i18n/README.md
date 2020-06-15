@@ -1,12 +1,12 @@
-# `@reactseed/template-antd`
+# `@reactseed/template-antd-i18n`
 
 [![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url] ![NPM-CI][CI-image]
 
-[npm-image]: https://img.shields.io/npm/v/@reactseed/template-antd.svg
-[npm-url]: https://www.npmjs.com/package/@reactseed/template-antd
+[npm-image]: https://img.shields.io/npm/v/@reactseed/template-antd-i18n.svg
+[npm-url]: https://www.npmjs.com/package/@reactseed/template-antd-i18n
 [LICENSE-image]:https://img.shields.io/badge/license-BSD-blue.svg
-[LICENSE-url]: https://github.com/reactseed/template-antd/blob/master/LICENSE
-[CI-image]:https://github.com/reactseed/template-antd/workflows/NPM-CI/badge.svg
+[LICENSE-url]: https://github.com/reactseed/template-antd-i18n/blob/master/LICENSE
+[CI-image]:https://github.com/reactseed/template-antd-i18n/workflows/NPM-CI/badge.svg
 
 Ant Design template for the React Seed.
 ## Quick start
@@ -45,7 +45,7 @@ When you’re ready to deploy to production, create a minified bundle with `npm 
 Here are the top-level files and directories you'll see in an app created using this template.
 
 ```
-@reactseed/template-antd
+@reactseed/template-antd-i18n
 ├── build
 ├── mock
 ├── public
@@ -77,4 +77,4 @@ Here are the top-level files and directories you'll see in an app created using 
 
 ## License
 
-React Seed is open source software [licensed as BDS](https://github.com/reactseed/template-antd/blob/master/LICENSE).
+React Seed is open source software [licensed as BDS](https://github.com/reactseed/template-antd-i18n/blob/master/LICENSE).

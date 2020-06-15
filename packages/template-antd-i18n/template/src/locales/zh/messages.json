@@ -16,5 +16,5 @@
   "i18n.doc5": "5、这种方式也支持同样的 ICU MessageFormat 语法，支持带有变量",
   "i18n.doc6": "除了这两种常见的形式，lingui 支持其他复杂的组件。下例是复数语法的情况。如: Plural | Select | SelectOrdinal | date | number, <0>查看更多</0>。支持 Plural 需要额外的配置，<1>查看更多</1>。",
   "i18n.doc7": "7、通常情况下，我们无需定义字段的ID，使用命令行 npm run extract 可以从代码中自动提取 Tans 等文案，文案内容即是字段名称。",
-  "i18n.doc8": "8. Ant Design UI 组件。"
+  "i18n.doc8": "8、 Ant Design UI 组件。"
 }

@@ -24,11 +24,13 @@ const useIntlProvider = () => {
       i18n.activate(language);
     });
 
-    setLocale(antdI18nMap[language]);
+    import(`antd/lib/locale/${antdI18nMap[language]}.js`).then(data => {
+      setLocale(data.default);
+    });
   }, [language]);
 
   return {
-    language: language as TSupportedLocales,
+    language,
     setLanguage,
     locale,
     i18n,

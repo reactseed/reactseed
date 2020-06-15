@@ -15,11 +15,10 @@ import { Dropdown, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
-import { menus, menuIcon, language, languages } from '@/configs';
+import { menus, menuIcon, language, languages, config } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import { ConfigContext } from '@/utils/context';
 import styles from './index.module.less';
-import './index.css';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
   menus.map(({ icon, children, ...item }) => ({
@@ -92,8 +91,8 @@ const BasicLayout: React.FC = props => {
   return (
     <>
       <ProBasicLayout
-        title="React Seed"
-        logo="logo192.png"
+        title={config.title}
+        logo={config.logo}
         menuDataRender={menuDataRender}
         menuItemRender={menuItemRender}
         menuProps={menuProps}

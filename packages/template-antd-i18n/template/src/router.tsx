@@ -1,13 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { PageLoading } from '@ant-design/pro-layout';
+import { ConfigProvider } from 'antd';
+import { I18nProvider } from '@lingui/react';
 import { hot } from 'react-hot-loader/root';
 import { Layout } from '@/components';
 import routes from '@/routes';
 import { useIntlProvider } from '@/hooks';
 import { ConfigContext } from '@/utils/context';
-import { I18nProvider } from '@lingui/react';
-import { ConfigProvider } from 'antd';
 
 const App: React.FC = () => {
   const { language, setLanguage, i18n, locale } = useIntlProvider();

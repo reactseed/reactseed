@@ -1,4 +1,6 @@
 export default {
   navTheme: 'light',
-  primaryColor: '#006EFF',
+  primaryColor: '#006EF',
+  fixedHeader: true,
+  fixSiderbar: true,
 };

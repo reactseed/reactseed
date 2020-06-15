@@ -7,9 +7,10 @@ import routes from '@/routes';
 import { useIntlProvider } from '@/hooks';
 import { ConfigContext } from '@/utils/context';
 import { I18nProvider } from '@lingui/react';
+import { ConfigProvider } from 'antd';
 
 const App: React.FC = () => {
-  const { language, setLanguage, i18n } = useIntlProvider();
+  const { language, setLanguage, i18n, locale } = useIntlProvider();
   const globalConfig = {
     language,
     setLanguage,
@@ -18,24 +19,26 @@ const App: React.FC = () => {
   return (
     <ConfigContext.Provider value={globalConfig}>
       <I18nProvider i18n={i18n}>
-        <Router>
-          <Layout>
-            <Suspense fallback={<PageLoading />}>
-              <Switch>
-                {routes.map(({ component, ...restProps }, index: number) => (
-                  <Route
-                    {...restProps}
-                    key={index}
-                    render={props => {
-                      const LazyComponent = lazy(component);
-                      return <LazyComponent {...props} />;
-                    }}
-                  />
-                ))}
-              </Switch>
-            </Suspense>
-          </Layout>
-        </Router>
+        <ConfigProvider locale={locale}>
+          <Router>
+            <Layout>
+              <Suspense fallback={<PageLoading />}>
+                <Switch>
+                  {routes.map(({ component, ...restProps }, index: number) => (
+                    <Route
+                      {...restProps}
+                      key={index}
+                      render={props => {
+                        const LazyComponent = lazy(component);
+                        return <LazyComponent {...props} />;
+                      }}
+                    />
+                  ))}
+                </Switch>
+              </Suspense>
+            </Layout>
+          </Router>
+        </ConfigProvider>
       </I18nProvider>
     </ConfigContext.Provider>
   );

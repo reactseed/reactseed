@@ -1,9 +1,11 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { setupI18n } from '@lingui/core';
 import { LOCALE_LANGUAGE } from '@/configs/constants';
 import { ConfigContext } from '@/utils/context';
 import { useLocalStorage } from '@/hooks';
+import { antdI18nMap } from '@/configs';
 import { TSupportedLocales } from '@/typings';
+import { ConfigProviderProps } from 'antd/lib/config-provider';
 
 const i18n = setupI18n();
 
@@ -14,16 +16,21 @@ const useIntlProvider = () => {
     defaultLocale
   );
 
+  const [locale, setLocale] = useState<ConfigProviderProps['locale']>();
+
   useEffect(() => {
     import(`@/locales/${language}/messages.json`).then(data => {
       i18n.load(language, data.default);
       i18n.activate(language);
     });
+
+    setLocale(antdI18nMap[language]);
   }, [language]);
 
   return {
     language: language as TSupportedLocales,
     setLanguage,
+    locale,
     i18n,
   };
 };

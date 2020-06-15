@@ -32,7 +32,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     }),
     fixBabelImports('antd', {
-      libraryDirectory: 'lib',
+      libraryDirectory: 'es',
       style: 'css',
     }),
     addWebpackPlugin(

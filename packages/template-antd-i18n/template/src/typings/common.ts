@@ -1,3 +1,5 @@
+import { ConfigProviderProps } from 'antd/lib/config-provider';
+
 export type TSupportedLocales = 'en' | 'zh';
 
 export interface TConfigContext {
@@ -12,4 +14,8 @@ export interface TLanguageItem {
 
 export interface TLanguage {
   [key: string]: TLanguageItem;
+}
+
+export interface TAntdI18nMap {
+  [key: string]: ConfigProviderProps['locale'];
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { useLingui } from '@/hooks';
+import { Pagination } from 'antd';
 
 const demoStyle = {
   padding: 12,
@@ -118,6 +119,10 @@ const I18N: React.FC = () => {
         </Trans>
       ),
       demo: <Trans id="custom.id">This text defines ID: custom.id</Trans>,
+    },
+    {
+      title: <Trans id="i18n.doc8">8. Ant Design UI Component.</Trans>,
+      demo: <Pagination defaultCurrent={1} total={50} showSizeChanger />,
     },
   ];
 

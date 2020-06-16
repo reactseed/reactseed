@@ -8,7 +8,7 @@ import ProBasicLayout, {
 import { Link } from 'react-router-dom';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
-import { menus, menuIcon } from '@/configs';
+import { menus, menuIcon, config } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import './index.css';
 
@@ -61,8 +61,8 @@ const BasicLayout: React.FC = props => {
   return (
     <>
       <ProBasicLayout
-        title="React Seed"
-        logo="logo192.png"
+        title={config.title}
+        logo={config.logo}
         menuDataRender={menuDataRender}
         menuItemRender={menuItemRender}
         menuProps={menuProps}

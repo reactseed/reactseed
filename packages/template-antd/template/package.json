@@ -80,6 +80,7 @@
     "antd-dayjs-webpack-plugin": "^1.0.0",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^1.0.0-alpha.0",
+    "customize-cra-react-refresh": "^1.1.0",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",

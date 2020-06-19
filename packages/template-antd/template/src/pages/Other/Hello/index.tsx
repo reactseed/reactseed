@@ -1,38 +1,12 @@
 import React from 'react';
 import { useRedux } from '@/hooks';
 import { Button, Input } from 'antd';
-import { createStore, Provider } from '@reactseed/use-redux';
-
-interface TState {
-  name: string;
-  age: number;
-}
-
-interface TMethod {
-  updateName: (name: string) => void;
-  becomeOlder: () => void;
-}
-
-const store = createStore(() => ({
-  age: 20,
-  name: 'reactseed',
-}));
-
-const methods = (state: TState): TMethod => {
-  const { age } = state;
-  return {
-    updateName: (name: string) => {
-      state.name = name;
-    },
-    becomeOlder: () => {
-      state.age = age + 1;
-    },
-  };
-};
-
+import { Provider } from '@reactseed/use-redux';
+import { methods } from './methods';
+import { store } from './store';
+import { TState, TMethod } from './models';
 const Hello: React.FC = () => {
   const [state, method] = useRedux<TState, TMethod>(methods);
-
   return (
     <>
       <p style={{ marginBottom: 16 }}>

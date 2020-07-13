@@ -39,7 +39,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
-## What's inside?
+## What's inside?
 Here are the top-level files and directories you'll see in an app created using this template.
 
 ```

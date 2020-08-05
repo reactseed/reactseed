@@ -1,5 +1,5 @@
 /**
- *  store must place in outof index.tsx
+ *  store must place in out of index.tsx
  */
 import { createStore } from '@reactseed/use-redux';
 import { TState } from '../models';

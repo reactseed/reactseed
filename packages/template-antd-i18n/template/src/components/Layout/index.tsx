@@ -18,6 +18,7 @@ import { isDevelopEnv } from '@/utils';
 import { menus, menuIcon, language, languages, config } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import { ConfigContext } from '@/utils/context';
+import type { MenuProps } from 'antd/es/menu';
 import styles from './index.module.less';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>

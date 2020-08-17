@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import { TablePaginationConfig } from 'antd/lib/table/Table';
+import type { TablePaginationConfig } from 'antd/lib/table/Table';
 import { useRequest } from '@/hooks';
 
 interface TQueryUserParams {

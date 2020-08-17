@@ -59,13 +59,18 @@ const BasicLayout: React.FC = props => {
     return <Link to={menuItemProps.path}>{defaultDom}</Link>;
   }, []);
 
-  const menuProps = useMemo(
+  const handleOnOpenChange = useCallback(
+    keys => setOpenKeys(keys as string[]),
+    []
+  );
+
+  const menuProps = useMemo<MenuProps>(
     () => ({
       selectedKeys,
       openKeys,
-      onOpenChange: setOpenKeys,
+      onOpenChange: handleOnOpenChange,
     }),
-    [openKeys, selectedKeys]
+    [handleOnOpenChange, openKeys, selectedKeys]
   );
 
   const rightContentRender = () => (

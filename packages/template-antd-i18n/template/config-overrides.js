@@ -33,7 +33,7 @@ module.exports = {
     }),
     fixBabelImports('antd', {
       libraryDirectory: 'es',
-      style: 'css',
+      style: true,
     }),
     addWebpackPlugin(
       new AntdDayjsWebpackPlugin(),

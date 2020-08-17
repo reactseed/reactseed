@@ -32,12 +32,12 @@ module.exports = {
     }),
     fixBabelImports('antd', {
       libraryDirectory: 'lib',
-      style: 'css',
+      style: true,
     }),
     addWebpackPlugin(
       new AntdDayjsWebpackPlugin(),
       new webpack.HotModuleReplacementPlugin()
     )
   ),
-  devServer: overrideDevServer(devServer)
+  devServer: overrideDevServer(devServer),
 };

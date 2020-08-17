@@ -23,7 +23,7 @@ module.exports = {
       lessOptions: {
         javascriptEnabled: true,
         modifyVars: {
-          'primary-color': '#006EFF',
+          hack: `true; @import "src/themes/antd.var.less";`, // Override antd
         },
       },
     }),

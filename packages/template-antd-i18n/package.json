@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/template-antd-i18n",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "React seed ant design and i18n template for creating react app",
   "scripts": {
     "commit": "git cz"

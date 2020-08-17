@@ -1,4 +1,4 @@
-import { RouteProps } from '@/typings';
+import type { RouteProps } from '@/typings';
 
 const routes: RouteProps[] = [
   {

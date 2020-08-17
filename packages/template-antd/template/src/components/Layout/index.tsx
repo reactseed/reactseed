@@ -11,7 +11,7 @@ import ProBasicLayout, {
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
-import { MenuProps } from 'antd/es/menu';
+import type { MenuProps } from 'antd/es/menu';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
   menus.map(({ icon, children, ...item }) => ({

@@ -1,4 +1,4 @@
-import { TState, TMethod } from '../models';
+import type { TState, TMethod } from '../models';
 
 export const methods = (state: TState): TMethod => {
   const { age } = state;

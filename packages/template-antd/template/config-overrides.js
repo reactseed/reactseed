@@ -11,10 +11,7 @@ const {
   overrideDevServer,
   addWebpackPlugin,
   fixBabelImports,
-  addBabelPlugin,
 } = require('customize-cra');
-const nodeModulesPath = path.resolve(__dirname, 'node_modules');
-const nodeModules = pkg => path.resolve(nodeModulesPath, pkg);
 
 module.exports = {
   webpack: override(

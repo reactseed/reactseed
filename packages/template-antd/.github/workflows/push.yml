@@ -29,5 +29,5 @@ jobs:
       working-directory: ./template
       run: yarn build
     - name: Delploy
-      working-directory: ./template/build
-      run: yarn global add surge && surge . ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
+    - run: npm install -g surge
+    - run: surge ./template/build ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}

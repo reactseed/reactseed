@@ -8,16 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Automated Version Bump
-      uses: phips28/gh-action-bump-version@v7.1.0
-      env:
-        GITHUB_USER: ${{secrets.AUTHOR_NAME}}
-        GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
-    - uses: actions/setup-node@v1.4.2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.2
       with:
         node-version: 12
-        registry-url: https://registry.npmjs.org/
+        registry-url: https://registry.npmjs.org
     - name: Publish
       run: npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    - name: Automated Version Bump
+      uses: phips28/gh-action-bump-version@master
+      env:
+        GITHUB_USER: ${{secrets.AUTHOR_NAME}}
+        GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}

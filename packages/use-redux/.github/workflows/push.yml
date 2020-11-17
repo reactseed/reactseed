@@ -19,12 +19,13 @@ jobs:
         run: yarn build:type
       - name: Build ES5 code
         run: yarn build
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Automated Version Bump
         uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_USER: ${{secrets.AUTHOR_NAME}}
           GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+

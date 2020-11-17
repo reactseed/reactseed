@@ -1,25 +1,20 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const webpack = require('webpack');
 const devServer = require('@reactseed/devserver');
-const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
+const { addReactRefresh } = require('customize-cra-react-refresh');
 const {
   override,
   addWebpackAlias,
   addLessLoader,
   overrideDevServer,
-  addWebpackPlugin,
   fixBabelImports,
-  addBabelPlugin,
   addBabelPreset,
 } = require('customize-cra');
-const nodeModulesPath = path.resolve(__dirname, 'node_modules');
-const nodeModules = pkg => path.resolve(nodeModulesPath, pkg);
 
 module.exports = {
   webpack: override(
+    addReactRefresh(),
     addBabelPreset('@lingui/babel-preset-react'),
-    addBabelPlugin('react-hot-loader/babel'),
     addLessLoader({
       lessOptions: {
         javascriptEnabled: true,
@@ -35,20 +30,6 @@ module.exports = {
       libraryDirectory: 'es',
       style: true,
     }),
-    addWebpackPlugin(
-      new AntdDayjsWebpackPlugin(),
-      new webpack.HotModuleReplacementPlugin()
-    ),
-    config => {
-      if (config.mode === 'development') {
-        config.resolve.alias['react-dom'] = path.resolve(
-          __dirname,
-          'node_modules/@hot-loader/react-dom'
-        );
-        config.entry.unshift(nodeModules('react-hot-loader/patch'));
-      }
-      return config;
-    }
   ),
   devServer: overrideDevServer(devServer, config => {
     config.inline = true;

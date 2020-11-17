@@ -13,10 +13,15 @@ jobs:
         env:
           GITHUB_USER: ${{secrets.AUTHOR_NAME}}
           GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
-      - uses: actions/setup-node@v1.4.2
+      - uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org
+      - name: Install Dependencies
+      - run: yarn install
+      - name: Build product
+      - run: yarn build:type
+      - run: yarn build
       - name: Publish
         run: npm publish --access public
         env:

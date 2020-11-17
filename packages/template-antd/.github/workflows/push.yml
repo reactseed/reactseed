@@ -28,6 +28,10 @@ jobs:
     - name: Build 
       working-directory: ./template
       run: yarn build
-    - name: Delploy
+    - name: Install surge and fire deployment
+      uses: actions/setup-node@v2.1.2
+      with:
+        node-version: 12
+        registry-url: https://registry.npmjs.org
     - run: npm install -g surge
     - run: surge ./template/build ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}

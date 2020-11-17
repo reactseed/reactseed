@@ -23,8 +23,11 @@ jobs:
         GITHUB_USER: ${{secrets.AUTHOR_NAME}}
         GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
     - name: Install Dependencies
-      run: cd template && yarn install && yarn global add surge
+      working-directory: ./template
+      run: yarn install 
     - name: Build 
-      run: cd template && yarn build
+      working-directory: ./template
+      run: yarn build
     - name: Delploy
-      run: surge ./template/build ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
+      working-directory: ./template/build
+      run: yarn global add surge && surge . ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}

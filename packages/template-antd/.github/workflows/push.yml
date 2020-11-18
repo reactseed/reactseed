@@ -22,16 +22,24 @@ jobs:
       env:
         GITHUB_USER: ${{secrets.AUTHOR_NAME}}
         GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
-    - name: Install Dependencies
-      working-directory: ./template
-      run: yarn install 
-    - name: Build 
-      working-directory: ./template
-      run: yarn build
-    - name: Install surge and fire deployment
+  deploy:
+    runs-on: ubuntu-latest 
+    defaults:
+      run:
+        shell: bash
+        working-directory: template 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.2
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org
-    - run: npm install -g surge
-    - run: surge ./template/build ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
+    - name: Install Dependencies
+      run: yarn install 
+    - name: Build 
+      run: yarn build
+    - name: Install surge and fire deployment
+      run: npm install -g surge
+    - name: Deployment
+      run: surge ./build ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}

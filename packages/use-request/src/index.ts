@@ -1,4 +1,4 @@
-import useRequest from '@umijs/use-request'
+import useRequest from '@ahooksjs/use-request'
 import {
   CombineService,
   BaseOptions,
@@ -14,7 +14,7 @@ import {
   PaginatedParams,
   PaginatedResult,
   BasePaginatedOptions,
-} from '@umijs/use-request/lib/types'
+} from '@ahooksjs/use-request/lib/types'
 import request, { axios } from './request'
 
 export interface Config {

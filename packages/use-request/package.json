@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/use-request",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Use request with a React hooks",
   "main": "lib/index.js",
   "scripts": {
@@ -49,7 +49,7 @@
     }
   },
   "dependencies": {
-    "@umijs/use-request": "^1.4.2",
+    "@ahooksjs/use-request": "^2.8.1",
     "axios": "^0.19.2"
   },
   "devDependencies": {

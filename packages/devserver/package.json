@@ -55,5 +55,8 @@
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "react-scripts": "^3.4.1"
+  },
+  "dependencies": {
+    "glob": "^7.1.6"
   }
 }

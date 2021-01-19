@@ -1,17 +1,20 @@
 const fs = require('fs')
 const chokidar = require('chokidar')
 const path = require('path')
+const glob = require('glob')
 
 const mockPath = path.resolve(fs.realpathSync(process.cwd()), 'mock')
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-module.exports = function (prefix = '_') {
+module.exports = function (options = {}) {
+  const { ignore = [`${mockPath}/**/_*.js`], delay = 300 } = options
+
   const createMockHandler = (method, path, handler) => async (
     req,
     res,
     next
   ) => {
-    await sleep(300)
+    await sleep(delay)
     if (typeof handler === 'function') {
       handler(req, res, next)
     } else {
@@ -21,14 +24,16 @@ module.exports = function (prefix = '_') {
 
   const getConfig = function () {
     const mockConfig = {}
-    fs.readdirSync(mockPath).forEach((file) => {
-      delete require.cache[`${mockPath}/${file}`]
-      if (file.indexOf(prefix) < 0) {
-        try {
-          Object.assign(mockConfig, require(`${mockPath}/${file}`))
-        } catch (error) {
-          console.error(error)
-        }
+    const mockPaths = glob.sync(`${mockPath}/**/*.js`, {
+      ignore,
+    })
+
+    mockPaths.forEach((file) => {
+      delete require.cache[file]
+      try {
+        Object.assign(mockConfig, require(file))
+      } catch (error) {
+        console.error(error)
       }
     })
 
@@ -52,7 +57,7 @@ module.exports = function (prefix = '_') {
 
   let mockData = getConfig()
 
-  const watcher = chokidar.watch([mockPath], {
+  const watcher = chokidar.watch(`${mockPath}/**/*.js`, {
     ignoreInitial: true,
   })
 

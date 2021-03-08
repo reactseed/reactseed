@@ -1,0 +1,68 @@
+name: Delpoy the template to surge
+on:
+  release:
+    types: [created]
+jobs:
+  deploy-template:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: packages/template/template
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: npm install
+      - name: Build for production
+        run: npm run build
+      - name: Install surge
+        run: npm install -g surge
+      - name: Deploy to surge
+        run: surge ./build https://reactseed-template.surge.sh --token ${{secrets.SURGE_TOKEN}}
+  deploy-template-antd:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: packages/template-antd/template
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: npm install
+      - name: Build for production
+        run: npm run build
+      - name: Install surge
+        run: npm install -g surge
+      - name: Deploy to surge
+        run: surge ./build https://reactseed-template-antd.surge.sh --token ${{secrets.SURGE_TOKEN}}
+  deploy-template-antd-i18n:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: packages/template-antd-i18n/template
+    steps:
+        - uses: actions/checkout@v2
+        - name: Setup node.js environment
+          uses: actions/setup-node@v2.1.2
+          with:
+            node-version: 12
+            registry-url: https://registry.npmjs.org
+        - name: Install dependencies
+          run: npm install
+        - name: Build for production
+          run: npm run build
+        - name: Install surge
+          run: npm install -g surge
+        - name: Deploy to surge
+          run: surge ./build https://reactseed-template-antd-i18n.surge.sh --token ${{secrets.SURGE_TOKEN}}

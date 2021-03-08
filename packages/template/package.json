@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/template",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.3-alpha.0",
   "description": "React seed template for creating react app",
   "scripts": {
     "commit": "git cz"
@@ -40,5 +40,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
 }

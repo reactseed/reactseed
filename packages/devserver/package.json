@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/devserver",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.3-alpha.0",
   "description": "Override webpack devServer",
   "main": "index.js",
   "scripts": {
@@ -58,5 +58,6 @@
   },
   "dependencies": {
     "glob": "^7.1.6"
-  }
+  },
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
 }

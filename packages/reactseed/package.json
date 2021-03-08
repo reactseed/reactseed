@@ -1,7 +1,7 @@
 {
   "name": "@reactseed/cli",
   "description": "React seed command-line interface for creating a react app",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.3-alpha.0",
   "scripts": {
     "commit": "npx git-cz",
     "prettier": "prettier --write 'src/**/*.js'",
@@ -77,5 +77,6 @@
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "request": "^2.88.2"
-  }
+  },
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
 }

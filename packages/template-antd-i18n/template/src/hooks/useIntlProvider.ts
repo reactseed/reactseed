@@ -24,7 +24,8 @@ const useIntlProvider = () => {
       i18n.activate(language);
     });
 
-    import(`antd/lib/locale/${antdI18nMap[language]}.js`).then(data => {
+    const path = antdI18nMap[language];
+    import(`antd/lib/locale/${path}.js`).then(data => {
       setLocale(data.default);
     });
   }, [language]);

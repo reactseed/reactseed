@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/template-antd",
-  "version": "1.0.3-alpha.0",
+  "version": "1.0.3",
   "description": "React seed ant design template for creating react app",
   "scripts": {
     "commit": "git cz"

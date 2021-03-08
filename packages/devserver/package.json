@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactseed/devserver.git"
+    "url": "https://github.com/reactseed/reactseed.git"
   },
-  "homepage": "https://github.com/reactseed/devserver",
+  "homepage": "https://github.com/reactseed/reactseed",
   "bugs": {
-    "url": "https://github.com/reactseed/devserver/issues"
+    "url": "https://github.com/reactseed/reactseed/issues"
   },
   "license": "BSD",
   "lint-staged": {

@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactseed/use-request.git"
+    "url": "https://github.com/reactseed/reactseed.git"
   },
-  "homepage": "https://github.com/reactseed/use-request",
+  "homepage": "https://github.com/reactseed/reactseed",
   "bugs": {
-    "url": "https://github.com/reactseed/use-request/issues"
+    "url": "https://github.com/reactseed/reactseed/issues"
   },
   "license": "BSD",
   "lint-staged": {

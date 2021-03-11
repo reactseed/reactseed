@@ -194,3 +194,7 @@ html[data-theme="dark"] .heroButton {
 html[data-theme="dark"] .heroBannerInner::before {
   opacity: 0.05;
 }
+
+html[data-theme="dark"] .features p {
+  color: #fff;
+}

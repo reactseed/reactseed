@@ -13,16 +13,6 @@ const siteConfig = {
   projectName: "reactseed",
   organizationName: "reactseed",
   favicon: "img/favicon.ico",
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        trailingSlash: false,
-      },
-    ],
-  ],
   presets: [
     [
       "@docusaurus/preset-classic",

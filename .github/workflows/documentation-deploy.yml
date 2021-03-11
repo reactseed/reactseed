@@ -1,0 +1,28 @@
+name: Delpoy the documentation to surge
+on: 
+  push:
+    paths:    
+      - 'docusaurus/**'
+jobs:
+  deploy-documentation:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: docusaurus/website
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: npm install
+      - name: Build for production
+        run: npm run build
+      - name: Install surge
+        run: npm install -g surge
+      - name: Deploy to surge
+        run: surge ./build https://reactseed.surge.sh --token ${{secrets.SURGE_TOKEN}}
+  

@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "1.0.0",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Welcome": {
+    "message": "欢迎",
+    "description": "The label for category Welcome in sidebar docs"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "开始使用",
+    "description": "The label for category Getting Started in sidebar docs"
+  }
+}

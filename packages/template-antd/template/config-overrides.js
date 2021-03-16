@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const webpack = require('webpack');
 const devServer = require('@reactseed/devserver');
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
-const { addReactRefresh } = require('customize-cra-react-refresh');
 const {
   override,
   addWebpackAlias,
@@ -15,7 +13,6 @@ const {
 
 module.exports = {
   webpack: override(
-    addReactRefresh(),
     addLessLoader({
       lessOptions: {
         javascriptEnabled: true,
@@ -31,10 +28,7 @@ module.exports = {
       libraryDirectory: 'lib',
       style: true,
     }),
-    addWebpackPlugin(
-      new AntdDayjsWebpackPlugin(),
-      new webpack.HotModuleReplacementPlugin()
-    )
+    addWebpackPlugin(new AntdDayjsWebpackPlugin())
   ),
   devServer: overrideDevServer(devServer),
 };

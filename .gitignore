@@ -26,3 +26,6 @@ yarn.lock
 
 # CI test
 env.secrets
+
+# Husky
+.husky

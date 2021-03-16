@@ -7,9 +7,32 @@
     "bootstrap": "lerna bootstrap",
     "version": "lerna version",
     "publish": "lerna publish",
-    "ls": "lerna list"
+    "ls": "lerna list",
+    "prepare": "husky install",
+    "commit": "git cz"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.2.2"
+  },
+  "pre-commit": "lint-staged",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose --no-verify"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

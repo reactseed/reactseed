@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Layout } from '@/components';
 import routes, { RouteProps } from '@/routes';
 
-export default () => (
+const RootRouter: React.FC = () => (
   <Router>
     <Suspense fallback={null}>
       <Switch>
@@ -14,7 +14,7 @@ export default () => (
             exact={route.exact}
             strict={route.strict}
             sensitive={route.sensitive}
-            render={(): React.ReactNode => {
+            render={() => {
               const RouteLazy = lazy(route.component);
 
               return (
@@ -29,3 +29,5 @@ export default () => (
     </Suspense>
   </Router>
 );
+
+export default RootRouter;

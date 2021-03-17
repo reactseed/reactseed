@@ -1,6 +1,6 @@
-export default {
+const defaultSettings = {
   navTheme: 'light',
-  primaryColor: '#006EF',
-  fixedHeader: true,
-  fixSiderbar: true,
+  primaryColor: '#006EFF',
 };
+
+export default defaultSettings;

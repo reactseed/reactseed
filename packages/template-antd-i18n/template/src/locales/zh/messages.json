@@ -1,5 +1,5 @@
 {
-  "Click go to &nbsp;<0>Simple Page</0>": "点击进入 <0>Simple Page</0>",
+  "Click go to  <0>Simple Page</0>": "点击进入 <0>Simple Page</0>",
   "Edit <0>src/pages/Home/index.tsx</0> and save to reload": "编辑并保存 <0>src/pages/Home/index.tsx</0> 文件以重新加载",
   "Hello, React Seed": "你好，React Seed",
   "Hello, {name}": "你好, {name}",

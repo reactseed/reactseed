@@ -1,10 +1,9 @@
-import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import styles from './index.module.less';
 import './index.less';
 
-const Home: React.FC = () => {
+const Home = () => {
   const history = useHistory();
 
   return (

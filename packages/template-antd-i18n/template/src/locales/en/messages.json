@@ -1,5 +1,5 @@
 {
-  "Click go to &nbsp;<0>Simple Page</0>": "Click go to <0>Simple Page</0>",
+  "Click go to  <0>Simple Page</0>": "Click go to  <0>Simple Page</0>",
   "Edit <0>src/pages/Home/index.tsx</0> and save to reload": "Edit <0>src/pages/Home/index.tsx</0> and save to reload",
   "Hello, React Seed": "Hello, React Seed",
   "Hello, {name}": "Hello, {name}",

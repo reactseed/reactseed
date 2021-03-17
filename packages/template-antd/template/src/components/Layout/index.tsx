@@ -66,12 +66,12 @@ const BasicLayout: React.FC = props => {
   return (
     <>
       <ProBasicLayout
+        {...settings}
         title={config.title}
         logo={config.logo}
         menuDataRender={menuDataRender}
         menuItemRender={menuItemRender}
         menuProps={menuProps}
-        {...settings}
       >
         {props.children}
       </ProBasicLayout>

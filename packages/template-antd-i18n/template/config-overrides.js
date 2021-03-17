@@ -19,7 +19,7 @@ module.exports = {
       lessOptions: {
         javascriptEnabled: true,
         modifyVars: {
-          hack: `true; @import "src/themes/antd.var.less";`, // Override antd
+          hack: `true; @import "src/themes/antd.default.less";`,
         },
       },
     }),

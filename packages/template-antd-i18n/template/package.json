@@ -125,6 +125,10 @@
         ]
       }
     ],
-    "format": "minimal"
+    "format": "minimal",
+    "runtimeConfigModule": [
+      "@/hooks/useIntlProvider",
+      "i18n"
+    ]
   }
 }

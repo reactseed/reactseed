@@ -12,6 +12,9 @@ const logger = {
   error: (...args) => {
     console.error(chalk.red(...args));
   },
+  success: (...args) => {
+    console.log(chalk.green(...args));
+  },
   debug: (...args) => {
     if (level === 'debug') {
       console.debug(chalk.yellow('Debug: '), chalk.yellow(...args));

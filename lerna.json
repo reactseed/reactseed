@@ -2,5 +2,15 @@
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "version": "independent",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md"],
+  "command": {
+    "publish": {
+      "verifyAccess": false,
+      "registry": "https://npm.pkg.github.com"
+    },
+    "version": {
+      "conventionalCommits": true
+    }
+  }
 }

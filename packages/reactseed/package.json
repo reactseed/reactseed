@@ -79,5 +79,8 @@
     "prettier": "^2.0.5",
     "request": "^2.88.2"
   },
-  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,4 +1,4 @@
-# `@reactseed/template-antd-vite`
+# `@reactseed/template-vite`
 
 [![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url] ![NPM-CI][CI-image]
 

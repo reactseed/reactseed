@@ -7,16 +7,18 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v2
-      env:
-        GITHUB_USER: ${{secrets.AUTHOR_NAME}}
-        GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}
-    - uses: actions/setup-node@v1.4.2
+      with:
+          fetch-depth: 0
+    - uses: actions/setup-node@v2
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org/
-    - name: Publish
-      run: npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+    - name: Install dependencies
+      run: yarn install    
+    - name: Publish package
+    - run: npx lerna publish --conventional-commits --yes

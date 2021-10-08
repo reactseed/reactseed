@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Automated Version Bump
-      uses: phips28/gh-action-bump-version@v7.1.0
       env:
         GITHUB_USER: ${{secrets.AUTHOR_NAME}}
         GITHUB_EMAIL: ${{secrets.AUTHOR_EMAIL}}

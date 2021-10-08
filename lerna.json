@@ -2,17 +2,5 @@
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "version": "independent",
-  "useWorkspaces": true,
-  "changelog": {
-    "repo": "@reactseed/cli",
-    "labels": {
-      "PR: New Feature": ":rocket: New Features",
-      "PR: Breaking Change": ":boom: Breaking Changes",
-      "PR: Bug Fix": ":bug: Bug Fix",
-      "PR: Documentation": ":memo: Documentation",
-      "PR: Internal": ":house: Internal",
-      "PR: Underlying Tools": ":hammer: Underlying Tools"
-    },
-    "cacheDir": ".changelog"
-  }
+  "useWorkspaces": true
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/reactseed/reactseed/compare/@reactseed/cli@1.1.0...@reactseed/cli@1.2.0) (2021-10-08)
+
+
+### Features
+
+* cli support vite template ([adc783d](https://github.com/reactseed/reactseed/commit/adc783d906558cd438b2512c98a00e694c83bffa))
+
+
+
+
+
 # 1.1.0 (2021-10-08)
 
 

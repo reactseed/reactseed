@@ -40,13 +40,13 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           
-      - name: Setup Node ${{ matrix.node_version }}
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
           registry-url: 'https://registry.npmjs.org'
       - name: Publish
-        run: yarn publish
+        run: npm run publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}

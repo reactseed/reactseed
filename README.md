@@ -125,6 +125,13 @@ Analyzes JavaScript bundles using the source maps.
 Your environment will have everything you need to build a modern single-page React app:
 - It is extended based on [Create React App](https://github.com/facebook/create-react-app),So React Seed contains all the features of [Create React App](https://github.com/facebook/create-react-app), See the section about [whats included](https://github.com/facebook/create-react-app#whats-included) for more information.
 
+## yarn workspace
+```bash
+# @reactseed/cli dependencie @reactseed/template-antd@2.0.0-alpha.0
+yarn workspace @reactseed/cli add -D @reactseed/template-antd@2.0.0-alpha.0
+# the same as: lerna add -D @reactseed/template-antd --scope=@reactseed/cli
+```
+
 ## License
 
 React Seed is open source software [licensed as BDS](https://github.com/reactseed/reactseed/blob/master/LICENSE).

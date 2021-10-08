@@ -32,3 +32,4 @@ env.secrets
 
 # local histroy
 .history
+/**/.histroy

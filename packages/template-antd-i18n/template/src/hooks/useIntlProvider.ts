@@ -7,7 +7,7 @@ import { antdI18nMap } from '@/configs';
 import { TSupportedLocales } from '@/typings';
 import { ConfigProviderProps } from 'antd/lib/config-provider';
 
-const i18n = setupI18n();
+export const i18n = setupI18n();
 
 const useIntlProvider = () => {
   const { language: defaultLocale } = useContext(ConfigContext);

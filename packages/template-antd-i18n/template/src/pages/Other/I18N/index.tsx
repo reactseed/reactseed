@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { useLingui } from '@/hooks';
 import { Pagination } from 'antd';
@@ -13,7 +12,7 @@ const titleStyle = {
   padding: '16px 0',
 };
 
-const I18N: React.FC = () => {
+const I18NPage = () => {
   const name = 'React Seed';
   const { i18n } = useLingui();
   const date = new Date();
@@ -61,7 +60,7 @@ const I18N: React.FC = () => {
         <input
           style={{ width: 300 }}
           type="text"
-          placeholder={i18n._(t`This is a text defined in JS`)}
+          placeholder={t`This is a text defined in JS`}
         />
       ),
     },
@@ -76,7 +75,7 @@ const I18N: React.FC = () => {
         <input
           style={{ width: 300 }}
           type="text"
-          placeholder={i18n._(t`This is a text defined in JS, ${name}`)}
+          placeholder={t`This is a text defined in JS, ${name}`}
         />
       ),
     },
@@ -99,13 +98,8 @@ const I18N: React.FC = () => {
       ),
       demo: (
         <div>
-          {i18n.date(date, {
-            hour12: false,
-          })}
-
-          {i18n.number(number, {
-            currency: '$',
-          })}
+          {i18n.date(date)}
+          {i18n.number(number)}
         </div>
       ),
     },
@@ -138,4 +132,4 @@ const I18N: React.FC = () => {
   );
 };
 
-export default I18N;
+export default I18NPage;

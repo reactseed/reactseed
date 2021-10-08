@@ -1,0 +1,24 @@
+{
+  "name": "@reactseed/template-antd",
+  "version": "2.0.0-alpha.1",
+  "description": "React seed ant design template for creating react app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactseed/reactseed.git"
+  },
+  "homepage": "https://github.com/reactseed/reactseed",
+  "bugs": {
+    "url": "https://github.com/reactseed/reactseed/issues"
+  },
+  "keywords": [
+    "template",
+    "antd",
+    "react",
+    "reactseed"
+  ],
+  "license": "BSD",
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
+  "publishConfig": {
+    "access": "public"
+  }
+}

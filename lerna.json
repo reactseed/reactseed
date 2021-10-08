@@ -1,0 +1,15 @@
+{
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
+  "version": "independent",
+  "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md"],
+  "command": {
+    "publish": {
+      "verifyAccess": false
+    },
+    "version": {
+      "conventionalCommits": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": "3.6.5",
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
+  "overrides": [
+    {
+      "test": ["**/*.ts", "**/*.tsx"],
+      "plugins": [["@babel/plugin-transform-typescript", { "isTSX": true }]]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@reactseed/template-vite",
+  "version": "0.1.4",
+  "description": "React seed ant design template for vite and creating react app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactseed/reactseed.git"
+  },
+  "homepage": "https://github.com/reactseed/reactseed",
+  "bugs": {
+    "url": "https://github.com/reactseed/reactseed/issues"
+  },
+  "keywords": [
+    "template",
+    "vite",
+    "antd",
+    "react",
+    "reactseed"
+  ],
+  "license": "BSD",
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
+  "publishConfig": {
+    "access": "public"
+  }
+}

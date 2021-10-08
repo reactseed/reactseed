@@ -1,0 +1,200 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.heroBanner {
+  text-align: center;
+  background-color: #f5f8fa;
+  color: #fff;
+}
+
+.heroTitle {
+  color: var(--ifm-color-primary);
+  text-align: center;
+  margin: 0;
+  font-size: 45px;
+  letter-spacing: 0.01em;
+}
+
+.heroSubTitle {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 200;
+  color: #999;
+  margin-bottom: 32px;
+}
+
+.heroButton {
+  display: inline-block;
+  font-size: 16px;
+  background-color: var(--ifm-color-primary);
+  color: #fff;
+  padding: 10px 32px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.heroButton:hover {
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.heroBannerInner {
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+
+.features {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  --ifm-spacing-horizontal: 32px;
+  --ifm-code-font-size:12px;
+  --ifm-code-border-radius:0;
+}
+
+.features h2 {
+  margin-bottom: 20px;
+  padding-top: 0;
+  font-size: 20px;
+}
+
+.features p {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 42em;
+  color: #444;
+}
+
+.featureHr {
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid #ececec;
+  margin: 0px auto;
+  width: 1220px;
+}
+
+html[data-theme="dark"] .featureHr {
+  border-bottom: 1px solid #1f232a;
+}
+
+html[data-theme="dark"] .features h2 {
+  color: #fff;
+}
+
+@media (max-width: 599px) and (min-width: 0px) {
+  .heroTitle {
+    font-size: 30px;
+  }
+
+  .heroSubTitle {
+    font-size: 16px;
+    max-width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroButton {
+    margin-bottom: 10px;
+  }
+
+  .features {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .heroBannerInner {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 600px) {
+  .heroBannerInner {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.heroBannerInner::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjZmZmIi8+CiAgPGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position: 100% 100px;
+  background-size: 50% auto;
+  opacity: 0.5;
+}
+
+.heroBannerInner {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .heroBannerInner {
+    padding-top: 95px;
+    padding-bottom: 85px;
+    max-width: 1500px;
+  }
+
+
+
+  .heroTitle {
+    font-size: 60px;
+  }
+
+  .heroSubTitle {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+
+  .heroButton {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .features h2 {
+    font-size: 24px;
+  }
+}
+
+html[data-theme="dark"] .heroBanner {
+  background-color: var(--ifm-background-color);
+}
+
+html[data-theme="dark"] .heroSubTitle {
+  color: #fff;
+}
+
+html[data-theme="dark"] .heroButton {
+  color: var(--ifm-background-color);
+}
+
+html[data-theme="dark"] .heroBannerInner::before {
+  opacity: 0.05;
+}
+
+html[data-theme="dark"] .features p {
+  color: #fff;
+}

@@ -30,6 +30,16 @@ jobs:
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: yarn install
+      - name: Authenticate with Registry
+        run: |
+          yarn logout
+          echo "@apollo-elements:registry=http://registry.npmjs.org/" > .npmrc
+          echo "registry=http://registry.npmjs.org/" >> .npmrc
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          npm whoami
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
       - name: Setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v2
         with:
@@ -38,4 +48,6 @@ jobs:
       - name: Publish
         run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

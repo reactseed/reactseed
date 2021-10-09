@@ -29,3 +29,7 @@ env.secrets
 
 # Husky
 .husky
+
+# local histroy
+.history
+/**/.histroy

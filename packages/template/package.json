@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/template",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "description": "React seed template for creating react app",
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
     "reactseed"
   ],
   "license": "BSD",
-  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
+  "publishConfig": {
+    "access": "public"
+  }
 }

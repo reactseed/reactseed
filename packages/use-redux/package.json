@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/use-redux",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Use redux to drive state with a React hooks",
   "main": "lib/index.js",
   "scripts": {
@@ -78,5 +78,8 @@
     "redux": "^4.0.5",
     "typescript": "^3.9.2"
   },
-  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23"
+  "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
+  "publishConfig": {
+    "access": "public"
+  }
 }

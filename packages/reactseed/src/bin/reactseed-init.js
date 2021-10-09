@@ -1,9 +1,15 @@
 const program = require('commander');
 const chalk = require('chalk');
-
-program.usage(`\n reactseed init`);
-program.option('-d, --debug', 'output extra debugging');
-program.parse(process.argv);
-
+const { isGitUrlTemplate } = require('../utils/initUtils');
+const { downloadTemplate } = require('../utils/dowload');
 const generatorAppWithYo = require('../generators/app/run-generator');
-generatorAppWithYo();
+program
+  .usage(`\n reactseed init`)
+  .option('-d, --debug', 'output extra debugging')
+  .option('-t, --template <template>', 'npm package name')
+  .option('-p, --path <path>', 'download destination path')
+  .parse(process.argv);
+
+const template = program.template;
+const savePath = program.path;
+template ? downloadTemplate(template, savePath) : generatorAppWithYo();

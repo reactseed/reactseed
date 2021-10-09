@@ -1,7 +1,17 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
-  "version": "2.0.0"
+  "version": "independent",
+  "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md","**/package.json"],
+  "command": {
+    "publish": {
+      "verifyAccess": false,
+      "registry": "http://registry.npmjs.org"
+    },
+    "version": {
+      "allowBranch": ["main","dev"],
+      "conventionalCommits": true
+    }
+  }
 }

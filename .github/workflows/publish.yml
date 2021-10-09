@@ -36,7 +36,7 @@ jobs:
         run: yarn install
       - name: Publish
         run: |
-          yarn run publish
+          npm run publish
         env:
           GH_TOKEN: ${{ secrets.PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,6 +5,7 @@
   "useWorkspaces": true,
   "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md","**/*.yml"],
   "command": {
+    "allowBranch": "main",
     "publish": {
       "verifyAccess": false,
       "registry": "http://registry.npmjs.org"

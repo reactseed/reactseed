@@ -8,7 +8,7 @@
     "allowBranch": "main",
     "publish": {
       "verifyAccess": false,
-      "registry": "http://registry.npmjs.org"
+      "registry": "https://registry.npmjs.org"
     },
     "version": {
       "allowBranch": ["main","dev"],

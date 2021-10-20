@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@ahooksjs/use-request": "^2.8.1",
-    "axios": "^0.19.2"
+    "axios": "^0.20.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

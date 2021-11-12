@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/use-redux",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Use redux to drive state with a React hooks",
   "main": "lib/index.js",
   "scripts": {

@@ -3,9 +3,8 @@ const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware')
 const evalSourceMapMiddleware = require('react-dev-utils/evalSourceMapMiddleware')
 const paths = require('react-scripts/config/paths')
 const path = require('path')
-const bodyParser = require('body-parser')
-const createMockMiddleware = require('./createMockMiddleware')
-
+const apiMocker = require('mocker-api')
+const mockPath = path.resolve(fs.realpathSync(process.cwd()), 'mock')
 module.exports = (config) => {
   config.before = (app, server) => {
     app.use(evalSourceMapMiddleware(server))
@@ -14,9 +13,7 @@ module.exports = (config) => {
     if (fs.existsSync(paths.proxySetup)) {
       require(paths.proxySetup)(app)
     }
-
-    app.use(bodyParser.json())
-    app.use(createMockMiddleware())
+    apiMocker(app, path.resolve(__dirname, `${mockPath}/app.js`))
   }
   return config
 }

@@ -76,7 +76,7 @@
     "prettier": "^2.0.5",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "typescript": "^3.9.2"
+    "typescript": "^4.4.4"
   },
   "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
   "publishConfig": {

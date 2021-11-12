@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/devserver",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Override webpack devServer",
   "main": "index.js",
   "scripts": {
@@ -57,7 +57,8 @@
     "react-scripts": "^3.4.1"
   },
   "dependencies": {
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "mocker-api": "^2.9.4"
   },
   "gitHead": "4f66f3e7fa1e9cc92e9a6d8ade9416b814f27f23",
   "publishConfig": {

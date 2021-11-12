@@ -8,7 +8,7 @@
     "allowBranch": "main",
     "publish": {
       "verifyAccess": false,
-      "registry": "http://9.134.97.81:8080/"
+      "registry": "https://registry.npmjs.org"
     },
     "version": {
       "allowBranch": ["main","dev"],

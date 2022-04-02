@@ -1,11 +1,12 @@
 {
   "name": "@reactseed/use-redux",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Use redux to drive state with a React hooks",
   "main": "lib/index.js",
   "scripts": {
     "dev": "babel -w src --out-dir lib --ignore \"**/__tests__\"  --extensions \".ts\"",
     "dev:type": "tsc -d --emitDeclarationOnly --watch src/*.ts --outDir lib",
+    "prepublish": "npm run build:type && npm run build",
     "build": "babel src --out-dir lib --ignore \"**/__tests__\" --extensions \".ts\"",
     "build:type": "tsc -d --emitDeclarationOnly",
     "commit": "npx git-cz",
@@ -61,7 +62,6 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/node": "^14.0.9",
-    "@types/react": "^16.9.35",
     "@types/react-redux": "^7.1.9",
     "@types/redux": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",

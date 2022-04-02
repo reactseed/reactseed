@@ -39,9 +39,10 @@ const BasicLayout: React.FC = props => {
     }
   }, [breadcrumbMap, pathname]);
 
-  const menuDataRender = useCallback(() => renderMenuItem(menuData), [
-    menuData,
-  ]);
+  const menuDataRender = useCallback(
+    () => renderMenuItem(menuData),
+    [menuData]
+  );
 
   const menuItemRender = useCallback((menuItemProps, defaultDom) => {
     if (menuItemProps.isUrl || !menuItemProps.path) {

@@ -46,9 +46,10 @@ const request = (config: RequestConfig) => {
     }
   }
 
-  return (typeof config === 'object'
-    ? axios(params as AxiosRequestConfig)
-    : axios(params as string)
+  return (
+    typeof config === 'object'
+      ? axios(params as AxiosRequestConfig)
+      : axios(params as string)
   )
     .then((response) => Promise.resolve(response.data))
     .catch((error) => {

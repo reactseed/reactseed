@@ -1,9 +1,10 @@
 {
   "name": "@reactseed/use-request",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Use request with a React hooks",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run build:type && npm run build",
     "dev": "babel -w src --out-dir lib --ignore \"**/__tests__\"  --extensions \".ts\"",
     "dev:type": "tsc -d --emitDeclarationOnly --watch src/*.ts --outDir lib",
     "build": "babel src --out-dir lib --ignore \"**/__tests__\"  --extensions \".ts\" && npm run build:type",
@@ -49,7 +50,7 @@
     }
   },
   "dependencies": {
-    "@ahooksjs/use-request": "^2.8.1",
+    "@ahooksjs/use-request": "^2.8.15",
     "axios": "^0.23.0"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@
 [LICENSE-url]: https://github.com/reactseed/template/blob/master/LICENSE
 [CI-image]:https://github.com/reactseed/template/workflows/NPM-CI/badge.svg
 
-Default template for the React Seed.
+Default template for the React Seed..
 ## Quick start
 ```sh
 npx @reactseed/cli init

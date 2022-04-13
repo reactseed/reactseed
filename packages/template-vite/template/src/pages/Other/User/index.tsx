@@ -16,7 +16,7 @@ interface TUser {
 }
 
 const queryUser = (data: TQueryUserParams) => ({
-  url: '/api',
+  url: 'https://randomuser.me/api',
   data: {
     page: data.current,
     results: data.pageSize,

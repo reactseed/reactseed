@@ -1,30 +1,21 @@
-import { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PageLoading } from '@ant-design/pro-layout';
 import { Layout } from '@/components';
 import routes from '@/routes';
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <Layout>
       <Suspense fallback={<PageLoading />}>
-        <Switch>
+        <Routes>
           {routes.map((route, index: number) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              strict={route.strict}
-              render={props => {
-                const LazyComponent = lazy(route.component);
-                return <LazyComponent {...props} />;
-              }}
-            />
+            <Route key={index} path={route.path} element={route.component} />
           ))}
-        </Switch>
+        </Routes>
       </Suspense>
     </Layout>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;

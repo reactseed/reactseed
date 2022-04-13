@@ -26,12 +26,16 @@ const menus: Route[] = [
         name: 'User (useRequest)',
       },
       {
-        path: '/simple',
-        name: 'Simple',
+        path: '/vitemockjs',
+        name: 'Vite Mockjs',
       },
       {
-        path: '/mock',
-        name: 'Mock',
+        path: '/cracomockerapi',
+        name: 'Craco mocker-api',
+      },
+      {
+        path: '/simple',
+        name: 'Simple',
       },
       {
         path: '/simple2',

@@ -1,5 +1,9 @@
 node_modules/**
 dist/**
+build/**
 public/**
-src/serviceWorker.ts
+src/reportWebVitals.ts
+src/setupProxy.js
 mock
+mocker
+craco.config.js

@@ -30,6 +30,10 @@ const menus: Route[] = [
         name: 'i18n (useLingui)',
       },
       {
+        path: '/cracomockerapi',
+        name: 'Craco mocker-api',
+      },
+      {
         path: '/simple',
         name: 'Simple',
       },

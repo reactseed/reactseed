@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PageLoading } from '@ant-design/pro-layout';
 import { ConfigProvider } from 'antd';
 import { I18nProvider } from '@lingui/react';
@@ -17,26 +17,24 @@ const App: React.FC = () => {
 
   return (
     <ConfigContext.Provider value={globalConfig}>
+      {/* @ts-ignore */}
       <I18nProvider i18n={i18n}>
         <ConfigProvider locale={locale}>
-          <Router>
+          <BrowserRouter>
             <Layout>
               <Suspense fallback={<PageLoading />}>
-                <Switch>
-                  {routes.map(({ component, ...restProps }, index: number) => (
+                <Routes>
+                  {routes.map((route, index: number) => (
                     <Route
-                      {...restProps}
                       key={index}
-                      render={props => {
-                        const LazyComponent = lazy(component);
-                        return <LazyComponent {...props} />;
-                      }}
+                      path={route.path}
+                      element={route.component}
                     />
                   ))}
-                </Switch>
+                </Routes>
               </Suspense>
             </Layout>
-          </Router>
+          </BrowserRouter>
         </ConfigProvider>
       </I18nProvider>
     </ConfigContext.Provider>

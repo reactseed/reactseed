@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import Home from './';
-
-test('renders learn react seed link', () => {
-  render(<Home />);
-  const linkElement = screen.getByText(/Learn React Seed/i);
-  expect(linkElement).toBeInTheDocument();
+describe('HomeTest', () => {
+  test('renders learn react seed link', async () => {
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
+    await waitFor(() => {
+      const linkElement = screen.getByText(/Learn React Seed/i);
+      expect(linkElement).toBeInTheDocument();
+    });
+  });
 });

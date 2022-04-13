@@ -1,25 +1,25 @@
-import React, {
-  useState,
-  useEffect,
-  useMemo,
-  useCallback,
-  useContext,
-} from 'react';
-import ProBasicLayout, {
-  SettingDrawer,
-  getMenuData,
-  MenuDataItem,
-  SettingDrawerProps,
-} from '@ant-design/pro-layout';
-import { Dropdown, Menu } from 'antd';
-import { Link } from 'react-router-dom';
+import { config, menuIcon, menus, language, languages } from '@/configs';
+import defaultSettings from '@/defaultSettings';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
-import { menus, menuIcon, language, languages, config } from '@/configs';
-import defaultSettings from '@/defaultSettings';
+import ProBasicLayout, {
+  getMenuData,
+  MenuDataItem,
+  SettingDrawer,
+  SettingDrawerProps,
+} from '@ant-design/pro-layout';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  useContext,
+} from 'react';
+import { Dropdown, Menu } from 'antd';
+import { Link } from 'react-router-dom';
 import { ConfigContext } from '@/utils/context';
-import type { MenuProps } from 'antd/es/menu';
 import styles from './index.module.less';
+import type { MenuProps } from 'antd/es/menu';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
   menus.map(({ icon, children, ...item }) => ({
@@ -28,7 +28,7 @@ const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
     children: children && renderMenuItem(children),
   }));
 
-const BasicLayout: React.FC = props => {
+const BasicLayout: React.FC<any> = props => {
   const location = useLocation();
   const [settings, setSetting] = useState(
     defaultSettings as SettingDrawerProps['settings']
@@ -49,9 +49,10 @@ const BasicLayout: React.FC = props => {
     }
   }, [breadcrumbMap, pathname]);
 
-  const menuDataRender = useCallback(() => renderMenuItem(menuData), [
-    menuData,
-  ]);
+  const menuDataRender = useCallback(
+    () => renderMenuItem(menuData),
+    [menuData]
+  );
 
   const menuItemRender = useCallback((menuItemProps, defaultDom) => {
     if (menuItemProps.isUrl || !menuItemProps.path) {
@@ -65,16 +66,16 @@ const BasicLayout: React.FC = props => {
     []
   );
 
-  const menuProps = useMemo<MenuProps>(
-    () => ({
+  const menuProps = useMemo<MenuProps>(() => {
+    return {
       selectedKeys,
       openKeys,
       onOpenChange: handleOnOpenChange,
-    }),
-    [handleOnOpenChange, openKeys, selectedKeys]
-  );
+    };
+  }, [handleOnOpenChange, openKeys, selectedKeys]);
 
   const rightContentRender = () => (
+    /* @ts-ignore */
     <Dropdown
       overlay={
         <Menu>

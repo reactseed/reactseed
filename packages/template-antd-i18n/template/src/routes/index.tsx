@@ -1,29 +1,42 @@
-import type { RouteProps } from '@/typings';
+import { lazy } from 'react';
 
-const routes: RouteProps[] = [
+const Home = lazy(() => import('@/pages/Home'));
+const Hello = lazy(() => import('@/pages/Other/Hello'));
+const User = lazy(() => import('@/pages/Other/User'));
+const CracoMockerApi = lazy(() => import('@/pages/Other/CracoMockerApi'));
+const I18N = lazy(() => import('@/pages/Other/I18N'));
+const Simple = lazy(() => import('@/pages/Other/Simple'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
+
+const routes = [
   {
     path: '/',
-    component: () => import('@/pages/Home'),
-    exact: true,
+    component: <Home />,
+    index: true,
   },
   {
     path: '/hello',
-    component: () => import('@/pages/Other/Hello'),
+    component: <Hello />,
   },
   {
     path: '/user',
-    component: () => import('@/pages/Other/User'),
+    component: <User />,
+  },
+  {
+    path: '/cracomockerapi',
+    component: <CracoMockerApi />,
   },
   {
     path: '/simple',
-    component: () => import('@/pages/Other/Simple'),
+    component: <Simple />,
   },
   {
     path: '/i18n',
-    component: () => import('@/pages/Other/I18N'),
+    component: <I18N />,
   },
   {
-    component: () => import('@/pages/NotFound'),
+    path: '*',
+    component: <NotFound />,
   },
 ];
 

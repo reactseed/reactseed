@@ -1,26 +1,26 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import styles from './index.module.less';
 import './index.less';
 
 const Home = () => {
-  const history = useHistory();
-
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
-      <h1>
-        <Trans>Welcome to React Seed</Trans>
-      </h1>
+      {/* @ts-ignore */}
+      <Trans>Welcome to React Seed</Trans>
       <ul>
         <li>
+          {/* @ts-ignore */}
           <Trans>
             Edit <code>src/pages/Home/index.tsx</code> and save to reload
           </Trans>
         </li>
         <li>
+          {/* @ts-ignore */}
           <Trans>
             Click go to &nbsp;
-            <span className="link" onClick={() => history.push('simple')}>
+            <span className="link" onClick={() => navigate('simple')}>
               Simple Page
             </span>
           </Trans>
@@ -32,6 +32,7 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
+            {/* @ts-ignore */}
             <Trans>Learn React Seed</Trans>
           </a>
         </li>

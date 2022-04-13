@@ -21,28 +21,34 @@ const I18NPage = () => {
   const data = [
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc1">
           1. Use the Tans component to wrap the text to be translated.
         </Trans>
       ),
+      /* @ts-ignore */
       demo: <Trans>Hello, React Seed</Trans>,
     },
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc2">
           2. Trans supports text translation with variables.
         </Trans>
       ),
+      /* @ts-ignore */
       demo: <Trans>Hello, {name}</Trans>,
     },
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc3">
           3. Trans also supports translating text with components, even nesting
           multiple components.
         </Trans>
       ),
       demo: (
+        /* @ts-ignore */
         <Trans>
           View <a href="#">More</a>
         </Trans>
@@ -50,6 +56,7 @@ const I18NPage = () => {
     },
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc4">
           4. The text defined in the JS cannot use the Tans component. Common
           scenarios are common: a message in Toast, a placeholder attribute of
@@ -66,6 +73,7 @@ const I18NPage = () => {
     },
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc5">
           5. This method also supports the same ICU MessageFormat syntax, with
           variables.
@@ -82,6 +90,7 @@ const I18NPage = () => {
     {
       title: (
         <div>
+          {/* @ts-ignore */}
           <Trans id="i18n.doc6">
             6. In addition to these two common forms, Lingui supports other
             complex components. The following example is the case of plural
@@ -105,6 +114,7 @@ const I18NPage = () => {
     },
     {
       title: (
+        /* @ts-ignore */
         <Trans id="i18n.doc7">
           7. Under normal circumstances, we do not need to define the ID of the
           field, using the command line npm run extract can automatically
@@ -112,9 +122,11 @@ const I18NPage = () => {
           field name.
         </Trans>
       ),
+      /* @ts-ignore */
       demo: <Trans id="custom.id">This text defines ID: custom.id</Trans>,
     },
     {
+      /* @ts-ignore */
       title: <Trans id="i18n.doc8">8. Ant Design UI Component.</Trans>,
       demo: <Pagination defaultCurrent={1} total={50} showSizeChanger />,
     },

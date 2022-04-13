@@ -1,19 +1,19 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './index.module.less';
 import './index.less';
 
 const Home = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
-      <h1>Welcome to React Seed</h1>
+      <h1>Welcome to React Seed Test</h1>
       <ul>
         <li>
           Edit <code>src/pages/Home/index.tsx</code> and save to reload.
         </li>
         <li>
           Click go to &nbsp;
-          <span className="link" onClick={() => history.push('simple')}>
+          <span className="link" onClick={() => navigate('simple')}>
             Simple Page
           </span>
         </li>

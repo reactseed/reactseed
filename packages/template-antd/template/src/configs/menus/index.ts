@@ -26,6 +26,10 @@ const menus: Route[] = [
         name: 'User (useRequest)',
       },
       {
+        path: '/cracomockerapi',
+        name: 'Craco mocker-api',
+      },
+      {
         path: '/simple',
         name: 'Simple',
       },

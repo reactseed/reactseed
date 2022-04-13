@@ -10,7 +10,7 @@ import ProBasicLayout, {
 } from '@ant-design/pro-layout';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './index.module.less';
 import type { MenuProps } from 'antd/es/menu';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
@@ -20,7 +20,7 @@ const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
     children: children && renderMenuItem(children),
   }));
 
-const BasicLayout: React.FC = props => {
+const BasicLayout: React.FC<any> = props => {
   const location = useLocation();
   const [settings, setSetting] = useState(
     defaultSettings as SettingDrawerProps['settings']

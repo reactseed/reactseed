@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -49,5 +48,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "version": "0.0.0"
 }

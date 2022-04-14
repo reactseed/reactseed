@@ -30,7 +30,9 @@ export default defineConfig({
   plugins: [
     react(),
     tsConfigPaths(),
-    viteMockServe(),
+    viteMockServe({
+      mockPath: 'mockvite',
+    }),
     vitePluginImp({
       libList: [
         {

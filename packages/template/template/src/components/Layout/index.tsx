@@ -1,5 +1,7 @@
 import React from 'react';
-// @ts-ignore
-const Layout: React.FC = ({ children }) => <>{children}</>;
+
+const Layout: React.FC<any> = () => {
+  return <></>;
+};
 
 export default Layout;

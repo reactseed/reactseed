@@ -5,7 +5,6 @@ import routes from '@/routes';
 
 const App = () => (
   <BrowserRouter>
-    {/* @ts-ignore */}
     <Layout>
       <Suspense fallback={null}>
         <Routes>

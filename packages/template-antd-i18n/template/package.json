@@ -91,6 +91,29 @@
       "^.+\\.module\\.(css|sass|scss|less)$": "identity-obj-proxy"
     }
   },
+  "lingui": {
+    "locales": [
+      "en",
+      "zh"
+    ],
+    "sourceLocale": "en",
+    "catalogs": [
+      {
+        "path": "src/locales/{locale}/messages",
+        "include": [
+          "src"
+        ],
+        "exclude": [
+          "**/node_modules/**"
+        ]
+      }
+    ],
+    "format": "minimal",
+    "runtimeConfigModule": [
+      "@/hooks/useIntlProvider",
+      "i18n"
+    ]
+  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
@@ -125,28 +148,5 @@
     "stylelint": "^14.6.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0"
-  },
-  "lingui": {
-    "locales": [
-      "en",
-      "zh"
-    ],
-    "sourceLocale": "en",
-    "catalogs": [
-      {
-        "path": "src/locales/{locale}/messages",
-        "include": [
-          "src"
-        ],
-        "exclude": [
-          "**/node_modules/**"
-        ]
-      }
-    ],
-    "format": "minimal",
-    "runtimeConfigModule": [
-      "@/hooks/useIntlProvider",
-      "i18n"
-    ]
   }
 }

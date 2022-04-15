@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRequest } from '@/hooks';
 import { Alert } from 'antd';
+import { useRequest } from '@/hooks';
 
 const UserPage: React.FC = () => {
   const { data, error } = useRequest(data => ({

@@ -1,7 +1,7 @@
 import React from 'react';
-import { useRedux } from '@/hooks';
 import { Button, Input } from 'antd';
 import { Provider } from '@reactseed/use-redux';
+import { useRedux } from '@/hooks';
 import { methods } from './methods';
 import { store } from './store';
 import { TState, TMethod } from './models';

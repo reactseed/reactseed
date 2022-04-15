@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Pagination } from 'antd';
 import { Trans, t } from '@lingui/macro';
 import { useLingui } from '@/hooks';
-import { Pagination } from 'antd';
 
 const demoStyle = {
   padding: 12,

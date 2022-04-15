@@ -1,17 +1,17 @@
-import { config, menuIcon, menus } from '@/configs';
-import defaultSettings from '@/defaultSettings';
-import { useLocation } from '@/hooks';
-import { isDevelopEnv } from '@/utils';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ProBasicLayout, {
   getMenuData,
   MenuDataItem,
   SettingDrawer,
   SettingDrawerProps,
 } from '@ant-design/pro-layout';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './index.module.less';
 import type { MenuProps } from 'antd/es/menu';
+import { config, menuIcon, menus } from '@/configs';
+import defaultSettings from '@/defaultSettings';
+import { useLocation } from '@/hooks';
+import { isDevelopEnv } from '@/utils';
+import './index.module.less';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
   menus.map(({ icon, children, ...item }) => ({

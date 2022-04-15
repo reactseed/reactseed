@@ -1,11 +1,11 @@
 import { useEffect, useContext, useState } from 'react';
+import { ConfigProviderProps } from 'antd/lib/config-provider';
 import { setupI18n } from '@lingui/core';
 import { LOCALE_LANGUAGE } from '@/configs/constants';
 import { ConfigContext } from '@/utils/context';
 import { useLocalStorage } from '@/hooks';
 import { antdI18nMap } from '@/configs';
 import { TSupportedLocales } from '@/typings';
-import { ConfigProviderProps } from 'antd/lib/config-provider';
 
 export const i18n = setupI18n();
 

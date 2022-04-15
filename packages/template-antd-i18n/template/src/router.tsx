@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PageLoading } from '@ant-design/pro-layout';
 import { ConfigProvider } from 'antd';
+import { PageLoading } from '@ant-design/pro-layout';
 import { I18nProvider } from '@lingui/react';
 import { Layout } from '@/components';
 import routes from '@/routes';

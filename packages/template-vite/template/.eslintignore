@@ -5,6 +5,6 @@ public/**
 src/reportWebVitals.ts
 src/setupProxy.js
 mock
-mocker
+mockvite
 vite.config.ts
 craco.config.js

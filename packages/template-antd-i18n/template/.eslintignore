@@ -5,5 +5,4 @@ public/**
 src/reportWebVitals.ts
 src/setupProxy.js
 mock
-mocker
 craco.config.js

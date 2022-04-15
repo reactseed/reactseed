@@ -3,8 +3,4 @@ dist/**
 build/**
 public/**
 src/reportWebVitals.ts
-src/setupProxy.js
-mock
-mocker
-vite.config.ts
 craco.config.js

@@ -1,9 +1,10 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './index.module.less';
 import './index.less';
 
 const Home = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       <h1>Welcome to React Seed</h1>
@@ -13,7 +14,7 @@ const Home = () => {
         </li>
         <li>
           Click go to &nbsp;
-          <span className="link" onClick={() => history.push('simple')}>
+          <span className="link" onClick={() => navigate('simple')}>
             Simple Page
           </span>
         </li>

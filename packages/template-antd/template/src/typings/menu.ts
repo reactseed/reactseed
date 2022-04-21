@@ -1,5 +1,5 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 export interface TMenuIcon {
-  [key: string]: React.ReactNode;
+  [key: string]: ReactNode;
 }

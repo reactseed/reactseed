@@ -1,12 +1,14 @@
-# __name__
+# **name**
+
 This project was bootstrapped with [React Seed](https://github.com/reactseed/reactseed).
 
 ## Available Scripts
-Inside the newly created project, you can run some built-in commands:
+
+In the project directory, you can run:
 
 ### `npm start` or `yarn start`
 
-Runs the app in development mode. 
+Runs the app in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.
@@ -19,7 +21,7 @@ See the section about [running tests](https://create-react-app.dev/docs/running-
 
 ### `npm run build` or `yarn build`
 
-Builds the app for production to the build folder.
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.
@@ -30,4 +32,5 @@ See the section about [deployment](https://create-react-app.dev/docs/deployment/
 ### `npm run analyze` or `yarn analyze`
 
 Analyzes JavaScript bundles using the source maps.
+
 > You need to run `npm run build` or `yarn build` before analysis.

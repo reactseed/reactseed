@@ -1,3 +1,4 @@
+import type { FC } from 'react';
 import { config, menuIcon, menus } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import { useLocation } from '@/hooks';
@@ -8,7 +9,7 @@ import ProBasicLayout, {
   SettingDrawer,
   SettingDrawerProps,
 } from '@ant-design/pro-layout';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 import type { MenuProps } from 'antd/es/menu';
@@ -20,7 +21,7 @@ const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
     children: children && renderMenuItem(children),
   }));
 
-const BasicLayout: React.FC = props => {
+const BasicLayout: FC = props => {
   const location = useLocation();
   const [settings, setSetting] = useState(
     defaultSettings as SettingDrawerProps['settings']
@@ -52,7 +53,7 @@ const BasicLayout: React.FC = props => {
   }, []);
 
   const handleOnOpenChange = useCallback(
-    keys => setOpenKeys(keys as string[]),
+    (keys: string[]) => setOpenKeys(keys as string[]),
     []
   );
 

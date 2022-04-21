@@ -1,6 +1,4 @@
-import React from 'react';
 import { Table } from 'antd';
-import type { TablePaginationConfig } from 'antd/lib/table/Table';
 import { useRequest } from '@/hooks';
 
 interface TQueryUserParams {
@@ -44,7 +42,7 @@ const columns = [
   },
 ];
 
-const UserPage: React.FC = () => {
+const UserPage = () => {
   const { data, loading, pagination } = useRequest<any, TUser>(queryUser, {
     paginated: true,
     formatResult: data => ({
@@ -62,13 +60,11 @@ const UserPage: React.FC = () => {
         </a>
         &nbsp;for more information.
       </p>
-
       <Table
         columns={columns}
         rowKey={record => record.login.uuid}
         dataSource={data?.list}
-        // useRequest returns that pagination and table's pagination parameter types are not compatible
-        pagination={pagination as TablePaginationConfig}
+        pagination={pagination}
         loading={loading}
       />
     </>

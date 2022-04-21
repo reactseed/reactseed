@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PageLoading } from '@ant-design/pro-layout';
 import { ConfigProvider } from 'antd';
 import { I18nProvider } from '@lingui/react';
@@ -8,7 +8,7 @@ import routes from '@/routes';
 import { useIntlProvider } from '@/hooks';
 import { ConfigContext } from '@/utils/context';
 
-const App: React.FC = () => {
+const RootRouter = () => {
   const { language, setLanguage, i18n, locale } = useIntlProvider();
   const globalConfig = {
     language,
@@ -17,30 +17,29 @@ const App: React.FC = () => {
 
   return (
     <ConfigContext.Provider value={globalConfig}>
-      <I18nProvider i18n={i18n}>
+      <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
         <ConfigProvider locale={locale}>
-          <Router>
+          <BrowserRouter>
             <Layout>
-              <Suspense fallback={<PageLoading />}>
-                <Switch>
-                  {routes.map(({ component, ...restProps }, index: number) => (
-                    <Route
-                      {...restProps}
-                      key={index}
-                      render={props => {
-                        const LazyComponent = lazy(component);
-                        return <LazyComponent {...props} />;
-                      }}
-                    />
-                  ))}
-                </Switch>
-              </Suspense>
+              <Routes>
+                {routes.map((route, index: number) => (
+                  <Route
+                    key={index}
+                    {...route}
+                    element={
+                      <Suspense fallback={<PageLoading />}>
+                        {route.element}
+                      </Suspense>
+                    }
+                  />
+                ))}
+              </Routes>
             </Layout>
-          </Router>
+          </BrowserRouter>
         </ConfigProvider>
       </I18nProvider>
     </ConfigContext.Provider>
   );
 };
 
-export default App;
+export default RootRouter;

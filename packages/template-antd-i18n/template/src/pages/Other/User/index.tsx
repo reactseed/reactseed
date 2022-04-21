@@ -1,4 +1,3 @@
-import React from 'react';
 import { Table } from 'antd';
 import type { TablePaginationConfig } from 'antd/lib/table/Table';
 import { useRequest } from '@/hooks';
@@ -44,7 +43,7 @@ const columns = [
   },
 ];
 
-const UserPage: React.FC = () => {
+const UserPage = () => {
   const { data, loading, pagination } = useRequest<any, TUser>(queryUser, {
     paginated: true,
     formatResult: data => ({

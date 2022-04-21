@@ -4,14 +4,20 @@ import { LOCALE_LANGUAGE } from '@/configs/constants';
 import { ConfigContext } from '@/utils/context';
 import { useLocalStorage } from '@/hooks';
 import { antdI18nMap } from '@/configs';
-import { TSupportedLocales } from '@/typings';
+import { SupportedLocales } from '@/typings';
 import { ConfigProviderProps } from 'antd/lib/config-provider';
+import { en, zh } from 'make-plural/plurals';
 
-export const i18n = setupI18n();
+export const i18n = setupI18n({
+  localeData: {
+    en: { plurals: en },
+    zh: { plurals: zh },
+  },
+});
 
 const useIntlProvider = () => {
   const { language: defaultLocale } = useContext(ConfigContext);
-  const [language, setLanguage] = useLocalStorage<TSupportedLocales>(
+  const [language, setLanguage] = useLocalStorage<SupportedLocales>(
     LOCALE_LANGUAGE,
     defaultLocale
   );

@@ -1,7 +1,7 @@
-import { TConfig } from '@/typings';
+import { TConfig, SupportedLocales } from '@/typings';
 
 export const config: TConfig = {
   title: 'React Seed',
   logo: 'logo192.png',
-  language: 'en',
+  language: SupportedLocales.en,
 };

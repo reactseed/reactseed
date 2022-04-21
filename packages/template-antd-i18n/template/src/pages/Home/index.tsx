@@ -1,10 +1,10 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import styles from './index.module.less';
 import './index.less';
 
 const Home = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <div className={styles.container}>
@@ -20,7 +20,7 @@ const Home = () => {
         <li>
           <Trans>
             Click go to &nbsp;
-            <span className="link" onClick={() => history.push('simple')}>
+            <span className="link" onClick={() => navigate('simple')}>
               Simple Page
             </span>
           </Trans>

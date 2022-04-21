@@ -1,33 +1,22 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '@/components';
-import routes, { RouteProps } from '@/routes';
+import routes from '@/routes';
 
 const RootRouter = () => (
-  <Router>
-    <Suspense fallback={null}>
-      <Switch>
-        {routes.map((route: RouteProps, index: number) => (
+  <BrowserRouter>
+    <Layout>
+      <Routes>
+        {routes.map((route, index: number) => (
           <Route
             key={index}
-            path={route.path}
-            exact={route.exact}
-            strict={route.strict}
-            sensitive={route.sensitive}
-            render={() => {
-              const RouteLazy = lazy(route.component);
-
-              return (
-                <Layout>
-                  <RouteLazy />
-                </Layout>
-              );
-            }}
+            {...route}
+            element={<Suspense fallback={null}>{route.element}</Suspense>}
           />
         ))}
-      </Switch>
-    </Suspense>
-  </Router>
+      </Routes>
+    </Layout>
+  </BrowserRouter>
 );
 
 export default RootRouter;

@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { createProxyMiddleware } = require('http-proxy-middleware');
+import mocker from 'mocker-api';
 
-module.exports = function (app) {
-  app.use(
-    createProxyMiddleware('/api', {
-      target: 'https://api.github.com',
-      changeOrigin: true,
-      ws: true,
-    })
-  );
-};
+export default function proxy() {
+  mocker('/api', {
+    target: 'https://api.github.com',
+    changeOrigin: true,
+    ws: true,
+  });
+}

@@ -1,20 +1,23 @@
-export interface RouteProps {
-  path: string | string[];
-  exact?: boolean;
-  sensitive?: boolean;
-  strict?: boolean;
-  component: () => Promise<{ default: any }>;
-}
+import { lazy } from 'react';
+import type { IndexRouteProps, PathRouteProps } from 'react-router-dom';
+type RouteProps = IndexRouteProps | PathRouteProps;
+
+const Home = lazy(() => import('@/pages/Home'));
+const Simple = lazy(() => import('@/pages/Simple'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
 const routes: RouteProps[] = [
   {
-    path: '/',
-    component: () => import('@/pages/Home'),
-    exact: true,
+    element: <Home />,
+    index: true,
   },
   {
     path: '/simple',
-    component: () => import('@/pages/Simple'),
+    element: <Simple />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ];
 

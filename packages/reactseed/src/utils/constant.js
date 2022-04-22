@@ -1,7 +1,7 @@
 const templateMap = {
   default: '@reactseed/template',
   antd: '@reactseed/template-antd',
-  vite: '@reactseed/template-vite',
+  antdVite: '@reactseed/template-antd-vite',
   antdI18n: '@reactseed/template-antd-i18n',
 };
 
@@ -16,8 +16,8 @@ const templateList = [
     name: 'Ant Design Template (useRedux + useRequest)',
   },
   {
-    value: 'vite',
-    name: 'Vite Ant Design Template (useRedux + useRequest)',
+    value: 'antdVite',
+    name: 'Ant Design Template using Vite (useRedux + useRequest)',
   },
   {
     value: 'antdI18n',

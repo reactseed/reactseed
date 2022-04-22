@@ -1,29 +1,37 @@
+import { lazy } from 'react';
 import type { RouteProps } from '@/typings';
+
+const Home = lazy(() => import('@/pages/Home'));
+const Hello = lazy(() => import('@/pages/Other/Hello'));
+const User = lazy(() => import('@/pages/Other/User'));
+const Simple = lazy(() => import('@/pages/Other/Simple'));
+const I18N = lazy(() => import('@/pages/Other/I18N'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
 const routes: RouteProps[] = [
   {
-    path: '/',
-    component: () => import('@/pages/Home'),
-    exact: true,
+    element: <Home />,
+    index: true,
   },
   {
     path: '/hello',
-    component: () => import('@/pages/Other/Hello'),
+    element: <Hello />,
   },
   {
     path: '/user',
-    component: () => import('@/pages/Other/User'),
+    element: <User />,
   },
   {
     path: '/simple',
-    component: () => import('@/pages/Other/Simple'),
+    element: <Simple />,
   },
   {
     path: '/i18n',
-    component: () => import('@/pages/Other/I18N'),
+    element: <I18N />,
   },
   {
-    component: () => import('@/pages/NotFound'),
+    path: '*',
+    element: <NotFound />,
   },
 ];
 

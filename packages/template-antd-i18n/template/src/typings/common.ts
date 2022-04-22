@@ -1,8 +1,11 @@
-export type TSupportedLocales = 'en' | 'zh';
+export enum SupportedLocales {
+  en = 'en',
+  zh = 'zh',
+}
 
 export interface TConfigContext {
-  language: TSupportedLocales;
-  setLanguage: (language: TSupportedLocales) => void;
+  language: SupportedLocales;
+  setLanguage: (language: SupportedLocales) => void;
 }
 
 export interface TLanguageItem {
@@ -10,16 +13,22 @@ export interface TLanguageItem {
   value: string;
 }
 
-export interface TLanguage {
-  [key: string]: TLanguageItem;
+export interface TLanguageItemWithKey extends TLanguageItem {
+  key: SupportedLocales;
+  flag: string;
+  value: string;
 }
 
-export interface TAntdI18nMap {
-  [key: string]: string;
-}
+export type TLanguage = {
+  [key in SupportedLocales]: TLanguageItem;
+};
+
+export type TAntdI18nMap = {
+  [key in SupportedLocales]: string;
+};
 
 export interface TConfig {
-  language: TSupportedLocales;
+  language: SupportedLocales;
   title: string;
   logo: string;
   [key: string]: string;

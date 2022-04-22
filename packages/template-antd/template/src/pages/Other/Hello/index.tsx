@@ -1,11 +1,11 @@
-import React from 'react';
 import { useRedux } from '@/hooks';
 import { Button, Input } from 'antd';
 import { Provider } from '@reactseed/use-redux';
 import { methods } from './methods';
 import { store } from './store';
 import { TState, TMethod } from './models';
-const Hello: React.FC = () => {
+
+const Hello = () => {
   const [state, method] = useRedux<TState, TMethod>(methods);
   return (
     <>
@@ -33,7 +33,7 @@ const Hello: React.FC = () => {
   );
 };
 
-const HelloPage: React.FC = () => {
+const HelloPage = () => {
   return (
     <Provider store={store}>
       <Hello />

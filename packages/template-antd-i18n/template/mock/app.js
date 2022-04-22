@@ -1,6 +1,8 @@
-const { apiPrefix } = require('./_constant');
-const packageJSON = require('../package.json');
+import { apiPrefix } from './constant';
+import packageJSON from '../package.json';
 
-module.exports = {
+const api = {
   [`GET ${apiPrefix}/app`]: packageJSON,
 };
+
+export default api;

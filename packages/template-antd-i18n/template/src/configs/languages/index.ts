@@ -1,4 +1,9 @@
-import { TLanguage, TAntdI18nMap } from '@/typings';
+import type {
+  TLanguage,
+  TAntdI18nMap,
+  TLanguageItemWithKey,
+  SupportedLocales,
+} from '@/typings';
 
 export const language: TLanguage = {
   zh: {
@@ -11,10 +16,12 @@ export const language: TLanguage = {
   },
 };
 
-export const languages = Object.entries(language).map(([key, value]: any) => ({
-  key,
-  ...value,
-}));
+export const languages: TLanguageItemWithKey[] = Object.entries(language).map(
+  ([key, value]) => ({
+    key: key as SupportedLocales,
+    ...value,
+  })
+);
 
 export const antdI18nMap: TAntdI18nMap = {
   zh: 'zh_CN',

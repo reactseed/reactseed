@@ -34,7 +34,7 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
+      "https://github.com/reactseed/reactseed/pull/5/conflict?name=packages%252Ftemplate-antd-i18n%252Ftemplate%252Fcraco.config.ts&base_oid=81050f0e64bbb45edd8716b8da6d2d23a5651c24&head_oid=a318e990e686a92c53084ac25604e54472a86436not dead",
       "not op_mini all"
     ],
     "development": [

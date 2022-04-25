@@ -1,7 +1,8 @@
 import CracoLess from 'craco-less';
 import CracoAlias from 'craco-alias';
+import type { CracoConfig } from '@craco/craco';
 
-module.exports = {
+const config: CracoConfig = {
   plugins: [
     {
       plugin: CracoLess,
@@ -16,3 +17,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

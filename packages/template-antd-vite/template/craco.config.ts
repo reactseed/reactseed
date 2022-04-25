@@ -1,8 +1,9 @@
 import CracoLess from 'craco-less';
 import CracoAlias from 'craco-alias';
 import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';
+import type { CracoConfig } from '@craco/craco';
 
-module.exports = {
+const config: CracoConfig = {
   plugins: [
     {
       plugin: CracoLess,
@@ -35,3 +36,5 @@ module.exports = {
     plugins: [['import', { libraryName: 'antd', style: true }]],
   },
 };
+
+export default config;

@@ -34,7 +34,7 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
+      "https://github.com/reactseed/reactseed/pull/5/conflict?name=packages%252Ftemplate-antd-i18n%252Ftemplate%252Fcraco.config.ts&base_oid=81050f0e64bbb45edd8716b8da6d2d23a5651c24&head_oid=a318e990e686a92c53084ac25604e54472a86436not dead",
       "not op_mini all"
     ],
     "development": [
@@ -80,6 +80,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^14.1.1",
+    "@types/craco__craco": "^6.4.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.25",
     "@types/react": "^18.0.4",

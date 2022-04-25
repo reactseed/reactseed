@@ -1,23 +1,31 @@
 # `@reactseed/template-antd-i18n`
 
-[![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url] ![NPM-CI][CI-image]
+[![LICENSE][license-image]][license-url] [![npm version][npm-image]][npm-url] ![NPM-CI][ci-image]
 
 [npm-image]: https://img.shields.io/npm/v/@reactseed/template-antd-i18n.svg
 [npm-url]: https://www.npmjs.com/package/@reactseed/template-antd-i18n
-[LICENSE-image]:https://img.shields.io/badge/license-BSD-blue.svg
-[LICENSE-url]: https://github.com/reactseed/template-antd-i18n/blob/master/LICENSE
-[CI-image]:https://github.com/reactseed/template-antd-i18n/workflows/NPM-CI/badge.svg
+[license-image]: https://img.shields.io/badge/license-BSD-blue.svg
+[license-url]: https://github.com/reactseed/template-antd-i18n/blob/master/LICENSE
+[ci-image]: https://github.com/reactseed/reactseed/workflows/publish/badge.svg
 
 Ant Design template for the React Seed.
+
+## Trying Online
+
+You can try Reactseed online on ⚡️ `stackblitz`.
+
+[⚡️ Edit on StackBlitz ](https://stackblitz.com/edit/reactseed-template-antd-i18n)
+
 ## Quick start
+
 ```sh
 npx @reactseed/cli init
 ```
 
 > If you use npm 5.1 or earlier, you can't use `npx`. Instead, install `@reactseed/cli` globally:
- 
+
 ```sh
-npm install -g @reactseed/cli 
+npm install -g @reactseed/cli
 ```
 
 > Now you can run:
@@ -27,16 +35,18 @@ reactseed init
 ```
 
 Select `Ant Design Template`：
+
 ```sh
 ? The template you want to use?
-  Defalut Template
-❯ Ant Design Template (useRedux + useRequest)
+    Defalut Template
+    Ant Design Template (useRedux + useRequest)
+    Ant Design Template using Vite (useRedux + useRequest)
+  ❯ Ant Design Template (useRedux + useRequest + LinguiJs)
 ```
 
 Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
-
 
 ## What's inside?
 
@@ -46,21 +56,25 @@ Here are the top-level files and directories you'll see in an app created using 
 
 ```
 @reactseed/template-antd-i18n
-├── build
 ├── mock
 ├── public
 ├── src
 │   ├── components
 │   ├── configs
 │   ├── hooks
+│   ├── locales
 │   ├── pages
 │   ├── routes
+│   ├── themes
 │   ├── typings
 │   ├── utils
-│   ├── defaultSettings.js
+│   ├── defaultSettings.ts
+│   ├── index.tsx
 │   ├── react-app-env.d.ts
-|   ├── router.tsx
-│   ├── serviceWorker.ts
+│   ├── react.d.ts
+│   ├── reportWebVitals.ts
+│   ├── router.tsx
+│   ├── setupTests.ts
 │   └── setupProxy.js
 ├── .env
 ├── .eslintignore
@@ -68,10 +82,9 @@ Here are the top-level files and directories you'll see in an app created using 
 ├── .gitignore
 ├── .prettierrc
 ├── .stylelintrc
-├── config-overrides.js
+├── craco.config.ts
 ├── README.md
 ├── tsconfig.json
-├── paths.tsconfig.json
 └── package.json
 ```
 

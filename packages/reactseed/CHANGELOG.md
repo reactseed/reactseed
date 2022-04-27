@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/reactseed/reactseed/compare/@reactseed/cli@1.3.0...@reactseed/cli@1.4.0) (2022-04-27)
+
+
+### Features
+
+* removing template-vite, Upgrading create-react-app@5.0 for template-antd-vite ([25072bb](https://github.com/reactseed/reactseed/commit/25072bbf403ad5bab74fd31dfdc380ba5013cf87))
+* update publish version ([a5ae7ef](https://github.com/reactseed/reactseed/commit/a5ae7ef9dfe0f0270e2dd8c81ce4be317d4918ec))
+
+
+
+
+
 # 1.3.0 (2021-10-20)
 
 

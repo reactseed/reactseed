@@ -56,8 +56,8 @@
   padding-top: 70px;
   padding-bottom: 70px;
   --ifm-spacing-horizontal: 32px;
-  --ifm-code-font-size:12px;
-  --ifm-code-border-radius:0;
+  --ifm-code-font-size: 12px;
+  --ifm-code-border-radius: 0;
 }
 
 .features h2 {
@@ -82,11 +82,11 @@
   width: 1220px;
 }
 
-html[data-theme="dark"] .featureHr {
+html[data-theme='dark'] .featureHr {
   border-bottom: 1px solid #1f232a;
 }
 
-html[data-theme="dark"] .features h2 {
+html[data-theme='dark'] .features h2 {
   color: #fff;
 }
 
@@ -130,7 +130,7 @@ html[data-theme="dark"] .features h2 {
 }
 
 .heroBannerInner::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 0;
   left: 0;
@@ -157,8 +157,6 @@ html[data-theme="dark"] .features h2 {
     max-width: 1500px;
   }
 
-
-
   .heroTitle {
     font-size: 60px;
   }
@@ -179,22 +177,22 @@ html[data-theme="dark"] .features h2 {
   }
 }
 
-html[data-theme="dark"] .heroBanner {
+html[data-theme='dark'] .heroBanner {
   background-color: var(--ifm-background-color);
 }
 
-html[data-theme="dark"] .heroSubTitle {
+html[data-theme='dark'] .heroSubTitle {
   color: #fff;
 }
 
-html[data-theme="dark"] .heroButton {
+html[data-theme='dark'] .heroButton {
   color: var(--ifm-background-color);
 }
 
-html[data-theme="dark"] .heroBannerInner::before {
+html[data-theme='dark'] .heroBannerInner::before {
   opacity: 0.05;
 }
 
-html[data-theme="dark"] .features p {
+html[data-theme='dark'] .features p {
   color: #fff;
 }

@@ -4,22 +4,18 @@ title: 关于文档
 sidebar_label: 关于文档
 ---
 
-Welcome to the Create React App documentation!
+欢迎使用 `ReactSeed` 文档！
 
-## Navigation
+## 导航
 
-You can find different topics in the table of contents. On desktop, you should see it in the left sidebar. On mobile, you should see it after pressing an icon with arrows in the top left corner.
+您可以在目录中找到不同的主题。 在桌面上，您应该在左侧边栏中看到它。 在移动设备上，您应该在按下左上角带有箭头的图标后看到它。
 
-## Looking for React Docs?
+## `React` 文档
 
-The documentation for React itself is located on a separate website: **[reactjs.org](https://reactjs.org/)**.
+React 文档位于一个单独的网站上：**[reactjs.org](https://reactjs.org/)**。
 
-This website is only about Create React App.
+该网站仅关于 `ReactSeed`。
 
-## Something Missing?
+## 文档缺失
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebook/create-react-app/issues) or [contribute some!](https://github.com/facebook/create-react-app/tree/master/docusaurus/docs)
-
-## Feedback
-
-We are always open to [your feedback](https://github.com/facebook/create-react-app/issues).
+如果您对本页面上的更多意见或建议，[告诉我们](https://github.com/reactseed/reactseed/issues) 或 [参与贡献](https://github.com/reactseed/reactseed/tree/master/docusaurus/docs)。

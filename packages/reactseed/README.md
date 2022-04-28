@@ -1,19 +1,28 @@
 # reactseed
 
-[![LICENSE][LICENSE-image]][LICENSE-url] [![npm version][npm-image]][npm-url] [![npm downloads][download-image]][download-url]
+[![LICENSE][license-image]][license-url] [![npm version][npm-image]][npm-url] [![npm downloads][download-image]][download-url]
 
-[LICENSE-image]:https://img.shields.io/badge/license-BSD-blue.svg
-[LICENSE-url]: https://github.com/reactseed/reactseed/blob/master/LICENSE
-
+[license-image]: https://img.shields.io/badge/license-BSD-blue.svg
+[license-url]: https://github.com/reactseed/reactseed/blob/master/LICENSE
 [npm-image]: https://img.shields.io/npm/v/@reactseed/cli.svg
 [npm-url]: https://www.npmjs.com/package/@reactseed/cli
-
 [download-image]: https://img.shields.io/npm/dm/@reactseed/cli.svg?style=flat-square
 [download-url]: https://npmjs.org/package/@reactseed/cli
 
 ## Getting Started
 
 React Seed is a best practices to create single-page React applications. It is extended based on [Create React App](https://github.com/facebook/create-react-app).
+
+### Trying Online
+
+You can try Reactseed online on ⚡️ `stackblitz`. It runs in the browser, so it is almost identical to the local setup but doesn't require installing anything on your machine.
+
+The supported template presets are:
+
+- [Default Template](https://stackblitz.com/edit/reactseed-template)
+- [Ant Design Template](https://stackblitz.com/edit/reactseed-template-antd)
+- [Ant Design Template with i18n](https://stackblitz.com/edit/reactseed-template-antd-i18n)
+- [Ant Design Template with vite](https://stackblitz.com/edit/reactseed-template-antd-vite)
 
 ### Quick Start
 
@@ -23,9 +32,9 @@ npm start
 ```
 
 > If you use npm 5.1 or earlier, you can't use `npx`. Instead, install `@reactseed/cli` globally:
- 
+
 ```sh
-npm install -g @reactseed/cli 
+npm install -g @reactseed/cli
 ```
 
 > Now you can run:
@@ -46,6 +55,7 @@ They are preconfigured and hidden so that you can focus on the code.
 Create a project, and you’re good to go.
 
 ## Creating an App
+
 **You’ll need to have Node 8.16.0 or Node 10.16.0 or later version on your local development machine** (but it’s not required on the server). You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
 
 To create a new app, you may choose one of the following methods:
@@ -57,18 +67,22 @@ npx @reactseed/cli init
 ```
 
 ### Output
+
 Running any of these commands will create a directory called `my-app` inside the current folder. Inside that directory, it will generate the initial project structure and install the transitive dependencies:
 
 ```
 my-app
-├── build
-├── mock
 ├── public
 ├── src
 │   ├── components
 │   ├── pages
 │   ├── routes
-│   ├── serviceWorker.ts
+│   ├── index.tsx
+│   ├── react-app-env.d.ts
+│   ├── react.d.ts
+│   ├── reportWebVitals.ts
+│   ├── router.tsx
+│   ├── setupTests.ts
 │   └── setupProxy.js
 ├── .env
 ├── .eslintignore
@@ -76,8 +90,7 @@ my-app
 ├── .gitignore
 ├── .prettierrc
 ├── .stylelintrc
-├── config-overrides.js
-├── paths.json
+├── craco.config.ts
 ├── README.md
 ├── tsconfig.json
 └── package.json
@@ -94,7 +107,7 @@ Inside the newly created project, you can run some built-in commands:
 
 ### `npm start` or `yarn start`
 
-Runs the app in development mode. 
+Runs the app in development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.
@@ -118,11 +131,13 @@ See the section about [deployment](https://create-react-app.dev/docs/deployment/
 ### `npm run analyze` or `yarn analyze`
 
 Analyzes JavaScript bundles using the source maps.
+
 > You need to run `npm run build` or `yarn build` before analysis.
 
 ## What’s Included?
 
 Your environment will have everything you need to build a modern single-page React app:
+
 - It is extended based on [Create React App](https://github.com/facebook/create-react-app),So React Seed contains all the features of [Create React App](https://github.com/facebook/create-react-app), See the section about [whats included](https://github.com/facebook/create-react-app#whats-included) for more information.
 
 ## License

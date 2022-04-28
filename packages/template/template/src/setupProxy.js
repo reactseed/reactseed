@@ -1,9 +1,11 @@
 import mocker from 'mocker-api';
+import { resolve } from 'path';
 
-export default function proxy() {
-  mocker('/api', {
-    target: 'https://api.github.com',
-    changeOrigin: true,
-    ws: true,
+module.exports = function (app) {
+  mocker(app, resolve('./mock/app'), {
+    proxy: {
+      '/api': 'https://api.github.com',
+    },
+    changeHost: true,
   });
-}
+};

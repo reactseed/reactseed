@@ -1,15 +1,15 @@
 ---
 id: getting-started
-title: Getting Started
+title: 开始使用
 ---
 
 `ReactSeed` 是创建单页 `React` 应用程序的最佳实践。它基于 [Create React App](https://github.com/facebook/create-react-app) 进行了扩展。
 
 ### 在线尝试
 
-你可以在 ⚡️ `stackblitz` 上在线试用 Reactseed。它在浏览器中运行，因此几乎与本地设置相同，但不需要在您的机器上安装任何东西。
+你可以在 ⚡️ [`stackblitz`](https://stackblitz.com/) 上在线试用 `ReactSeed`。它在浏览器中运行，因此几乎与本地设置相同，但不需要在您的机器上安装任何东西。
 
-支持的模板预设是：
+支持的模板预设有：
 
 - [Default Template](https://stackblitz.com/edit/reactseed-template)
 - [Ant Design Template](https://stackblitz.com/edit/reactseed-template-antd)
@@ -50,10 +50,44 @@ reactseed init
 
 要创建新应用，您可以选择以下方法之一：
 
-### npx
+### npx 安装
 
 ```sh
 npx @reactseed/cli init
+```
+
+#### 项目名称
+
+输入您的项目名称，默认为当前文件夹名。
+
+```
+? Your project name? (Default to current folder name) ()
+```
+
+#### 选择模板
+
+```sh
+? The template you want to use?
+  ❯ Defalut Template
+    Ant Design Template (useRedux + useRequest)
+    Ant Design Template using Vite (useRedux + useRequest)
+    Ant Design Template (useRedux + useRequest + LinguiJs)
+```
+
+支持的模板预设有：
+
+- Default Template
+- Ant Design Template
+- Ant Design Template with i18n
+- Ant Design Template with vite
+
+#### 选择包管理
+
+`ReactSeed` 将使用 `Yarn` 或 `npm` 来安装依赖项，默认使用 `Yarn`。 例如：
+
+```sh
+? Whether to install dependencies? (Y/n)
+? Use Yarn? (Y/n)
 ```
 
 ### 输出
@@ -94,7 +128,7 @@ cd my-app
 
 在新创建的项目中，您可以运行一些内置命令：
 
-### `npm start` or `yarn start`
+### `npm start` 或 `yarn start`
 
 在开发模式下运行应用程序。
 打开 [http://localhost:3000](http://localhost:3000) 在浏览器中查看。
@@ -102,12 +136,12 @@ cd my-app
 如果您进行编辑，该页面将重新加载。
 您还将在控制台中看到 `lint` 错误。
 
-### `npm test` or `yarn test`
+### `npm test` 或 `yarn test`
 
 在交互式监视模式下启动测试运行程序。
 有关详细信息，请参阅有关 [运行测试](https://create-react-app.dev/docs/running-tests/) 的部分。
 
-### `npm run build` or `yarn build`
+### `npm run build` 或 `yarn build`
 
 将用于生产的应用程序构建到 build 文件夹。
 它在生产模式下正确捆绑 React 并优化构建以获得最佳性能。
@@ -117,7 +151,7 @@ cd my-app
 
 有关详细信息，请参阅有关 [部署](https://create-react-app.dev/docs/deployment/) 的部分。
 
-### `npm run analyze` or `yarn analyze`
+### `npm run analyze` 或 `yarn analyze`
 
 使用 `source maps` 分析 JavaScript 构建产物。
 

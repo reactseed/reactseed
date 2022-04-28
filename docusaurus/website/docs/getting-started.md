@@ -58,6 +58,40 @@ To create a new app, you may choose one of the following methods:
 npx @reactseed/cli init
 ```
 
+#### Project name
+
+Enter your project name, the default is the current folder name.
+
+```
+? Your project name? (Default to current folder name) ()
+```
+
+#### Selecting a template
+
+```sh
+? The template you want to use?
+   ❯ Defalut Template
+     Ant Design Template (useRedux + useRequest)
+     Ant Design Template using Vite (useRedux + useRequest)
+     Ant Design Template (useRedux + useRequest + LinguiJs)
+```
+
+The supported template presets are:
+
+- Default Template
+- Ant Design Template
+- Ant Design Template with i18n
+- Ant Design Template with vite
+
+#### Selecting a package manager
+
+`ReactSeed` will use `Yarn` or `npm` to install dependencies, `Yarn` is used by default. E.g:
+
+```sh
+?Whether to install dependencies? (Y/n)
+? Use Yarn? (Y/n)
+```
+
 ### Output
 
 Running any of these commands will create a directory called `my-app` inside the current folder. Inside that directory, it will generate the initial project structure and install the transitive dependencies:

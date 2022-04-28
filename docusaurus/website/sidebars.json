@@ -1,10 +1,12 @@
 {
   "docs": {
-    "Welcome": [
-      "documentation-intro"
-    ],
+    "Welcome": ["documentation-intro"],
     "Getting Started": [
-      "getting-started"
+      "getting-started",
+      "folder-structure",
+      "available-scripts",
+      "supported-browsers-features",
+      "updating-to-new-releases"
     ]
   }
 }

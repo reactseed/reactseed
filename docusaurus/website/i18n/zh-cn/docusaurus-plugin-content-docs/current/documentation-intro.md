@@ -4,7 +4,7 @@ title: 关于文档
 sidebar_label: 关于文档
 ---
 
-欢迎使用 `ReactSeed` 文档！
+欢迎使用 `Reactseed` 文档！
 
 ## 导航
 
@@ -14,7 +14,7 @@ sidebar_label: 关于文档
 
 React 文档位于一个单独的网站上：**[reactjs.org](https://reactjs.org/)**。
 
-该网站仅关于 `ReactSeed`。
+该网站仅关于 `Reactseed`。
 
 ## 文档缺失
 

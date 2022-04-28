@@ -3,11 +3,11 @@ id: getting-started
 title: Getting Started
 ---
 
-React Seed is a best practices to create single-page React applications. It is extended based on [Create React App](https://github.com/facebook/create-react-app).
+`Reactseed` is a best practices to create single-page React applications. It is extended based on [Create React App](https://github.com/facebook/create-react-app).
 
-### Trying Online
+## Trying Online
 
-You can try Reactseed online on ⚡️ `stackblitz`. It runs in the browser, so it is almost identical to the local setup but doesn't require installing anything on your machine.
+You can try `Reactseed` online on ⚡️ `stackblitz`. It runs in the browser, so it is almost identical to the local setup but doesn't require installing anything on your machine.
 
 The supported template presets are:
 
@@ -16,7 +16,7 @@ The supported template presets are:
 - [Ant Design Template with i18n](https://stackblitz.com/edit/reactseed-template-antd-i18n)
 - [Ant Design Template with vite](https://stackblitz.com/edit/reactseed-template-antd-vite)
 
-### Quick Start
+## Quick Start
 
 ```sh
 npx @reactseed/cli init
@@ -58,7 +58,7 @@ To create a new app, you may choose one of the following methods:
 npx @reactseed/cli init
 ```
 
-#### Project name
+### Project name
 
 Enter your project name, the default is the current folder name.
 
@@ -66,7 +66,7 @@ Enter your project name, the default is the current folder name.
 ? Your project name? (Default to current folder name) ()
 ```
 
-#### Selecting a template
+### Selecting a template
 
 ```sh
 ? The template you want to use?
@@ -83,16 +83,16 @@ The supported template presets are:
 - Ant Design Template with i18n
 - Ant Design Template with vite
 
-#### Selecting a package manager
+### Selecting a package manager
 
-`ReactSeed` will use `Yarn` or `npm` to install dependencies, `Yarn` is used by default. E.g:
+`Reactseed` will use `Yarn` or `npm` to install dependencies, `Yarn` is used by default. E.g:
 
 ```sh
 ?Whether to install dependencies? (Y/n)
 ? Use Yarn? (Y/n)
 ```
 
-### Output
+## Output
 
 Running any of these commands will create a directory called `my-app` inside the current folder. Inside that directory, it will generate the initial project structure and install the transitive dependencies:
 
@@ -129,6 +129,8 @@ Once the installation is done, you can open your project folder:
 cd my-app
 ```
 
+## Scripts
+
 Inside the newly created project, you can run some built-in commands:
 
 ### `npm start` or `yarn start`
@@ -142,7 +144,7 @@ You will also see any lint errors in the console.
 ### `npm test` or `yarn test`
 
 Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://create-react-app.dev/docs/running-tests/) for more information.
+See the section about [running tests](./running-tests) for more information.
 
 ### `npm run build` or `yarn build`
 
@@ -152,7 +154,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
-See the section about [deployment](https://create-react-app.dev/docs/deployment/) for more information.
+See the section about [deployment](./deployment) for more information.
 
 ### `npm run analyze` or `yarn analyze`
 

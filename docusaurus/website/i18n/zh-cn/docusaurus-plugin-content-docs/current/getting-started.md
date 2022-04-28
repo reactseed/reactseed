@@ -3,11 +3,11 @@ id: getting-started
 title: 开始使用
 ---
 
-`ReactSeed` 是创建单页 `React` 应用程序的最佳实践。它基于 [Create React App](https://github.com/facebook/create-react-app) 进行了扩展。
+`Reactseed` 是创建单页 `React` 应用程序的最佳实践。它基于 [Create React App](https://github.com/facebook/create-react-app) 进行了扩展。
 
-### 在线尝试
+## 在线试用
 
-你可以在 ⚡️ [`stackblitz`](https://stackblitz.com/) 上在线试用 `ReactSeed`。它在浏览器中运行，因此几乎与本地设置相同，但不需要在您的机器上安装任何东西。
+你可以在 ⚡️ [`stackblitz`](https://stackblitz.com/) 上在线试用 `Reactseed`。它在浏览器中运行，因此几乎与本地设置相同，但不需要在您的机器上安装任何东西。
 
 支持的模板预设有：
 
@@ -16,7 +16,7 @@ title: 开始使用
 - [Ant Design Template with i18n](https://stackblitz.com/edit/reactseed-template-antd-i18n)
 - [Ant Design Template with vite](https://stackblitz.com/edit/reactseed-template-antd-vite)
 
-### 快速开始
+## 快速开始
 
 ```sh
 npx @reactseed/cli init
@@ -44,7 +44,7 @@ reactseed init
 你**不需要**安装或配置 webpack 或 Babel 之类的工具。
 它们是预先配置和隐藏的，因此您可以专注于代码。
 
-## 创建 `React` 应用
+## 创建应用
 
 **您需要在本地开发机器上安装 Node 8.16.0 或 Node 10.16.0 或更高版本**（但服务器上不需要）。您可以使用 [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) 或 [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) 在不同项目之间切换 Node 版本。
 
@@ -56,7 +56,7 @@ reactseed init
 npx @reactseed/cli init
 ```
 
-#### 项目名称
+### 项目名称
 
 输入您的项目名称，默认为当前文件夹名。
 
@@ -64,7 +64,7 @@ npx @reactseed/cli init
 ? Your project name? (Default to current folder name) ()
 ```
 
-#### 选择模板
+### 选择模板
 
 ```sh
 ? The template you want to use?
@@ -81,16 +81,16 @@ npx @reactseed/cli init
 - Ant Design Template with i18n
 - Ant Design Template with vite
 
-#### 选择包管理
+### 选择包管理
 
-`ReactSeed` 将使用 `Yarn` 或 `npm` 来安装依赖项，默认使用 `Yarn`。 例如：
+`Reactseed` 将使用 `Yarn` 或 `npm` 来安装依赖项，默认使用 `Yarn`。 例如：
 
 ```sh
 ? Whether to install dependencies? (Y/n)
 ? Use Yarn? (Y/n)
 ```
 
-### 输出
+## 输出目录
 
 运行这些命令中的任何一个都会在当前文件夹中创建一个名为`my-app`的目录。在该目录中，它将生成初始项目结构并安装传递依赖项：
 
@@ -126,6 +126,8 @@ my-app
 cd my-app
 ```
 
+## 内置命令
+
 在新创建的项目中，您可以运行一些内置命令：
 
 ### `npm start` 或 `yarn start`
@@ -139,7 +141,7 @@ cd my-app
 ### `npm test` 或 `yarn test`
 
 在交互式监视模式下启动测试运行程序。
-有关详细信息，请参阅有关 [运行测试](https://create-react-app.dev/docs/running-tests/) 的部分。
+有关详细信息，请参阅有关 [运行测试](./running-tests) 的部分。
 
 ### `npm run build` 或 `yarn build`
 
@@ -149,7 +151,7 @@ cd my-app
 构建产物被压缩并且文件名包含哈希。
 您的应用已准备好部署！
 
-有关详细信息，请参阅有关 [部署](https://create-react-app.dev/docs/deployment/) 的部分。
+有关详细信息，请参阅有关 [部署](./deployment) 的部分。
 
 ### `npm run analyze` 或 `yarn analyze`
 

@@ -5,17 +5,14 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-layout": "^6.35.1",
-    "@reactseed/use-redux": "^1.0.5",
     "@reactseed/use-request": "^1.0.8",
     "antd": "^4.19.5",
     "dayjs": "^1.11.1",
-    "immer": "^9.0.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-redux": "^7.2.6",
     "react-router-dom": "^6.3.0",
-    "redux": "^4.1.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.0.0-rc.0"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js' --only-mapped",

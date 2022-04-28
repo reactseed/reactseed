@@ -4,7 +4,7 @@ title: About the Documentation
 sidebar_label: About Docs
 ---
 
-Welcome to the Create React App documentation!
+Welcome to the React Seed documentation!
 
 ## Navigation
 
@@ -14,12 +14,12 @@ You can find different topics in the table of contents. On desktop, you should s
 
 The documentation for React itself is located on a separate website: **[reactjs.org](https://reactjs.org/)**.
 
-This website is only about Create React App.
+This website is only about React Seed.
 
 ## Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebook/create-react-app/issues) or [contribute some!](https://github.com/facebook/create-react-app/tree/master/docusaurus/docs)
+If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/reactseed/reactseed/issues) or [contribute some!](https://github.com/reactseed/reactseed/tree/master/docusaurus/docs)
 
 ## Feedback
 
-We are always open to [your feedback](https://github.com/facebook/create-react-app/issues).
+We are always open to [your feedback](https://github.com/facebook/reactseed/issues).

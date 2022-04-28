@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/reactseed/reactseed/compare/@reactseed/template-antd@2.2.0...@reactseed/template-antd@2.2.1) (2022-04-28)
+
+
+### Features
+
+* removing use-redux, adding zustand ([adadf09](https://github.com/reactseed/reactseed/commit/adadf09ecfd62e393f6adced4ceb0a2126ce2d36))
+
+
+
+
+
 # 2.2.0 (2022-04-27)
 
 

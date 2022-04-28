@@ -3,7 +3,7 @@
   "npmClient": "yarn",
   "version": "independent",
   "useWorkspaces": true,
-  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md","**/*.yml"],
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.yml"],
   "command": {
     "allowBranch": "main",
     "publish": {
@@ -11,7 +11,7 @@
       "registry": "https://registry.npmjs.org"
     },
     "version": {
-      "allowBranch": ["main","dev"],
+      "allowBranch": ["main", "dev"],
       "conventionalCommits": true
     }
   }

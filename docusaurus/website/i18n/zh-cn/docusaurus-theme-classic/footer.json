@@ -17,11 +17,11 @@
   },
   "link.item.label.GitHub Discussions": {
     "message": "GitHub Discussions",
-    "description": "The label of footer link with label=GitHub Discussions linking to https://github.com/reactseed/reactseed/discussions"
+    "description": "The label of footer link with label=GitHub Discussions linking to https://github.com/reactseed/reactseed/issues"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://www.github.com/reactseed/creactseed"
+    "description": "The label of footer link with label=GitHub linking to https://www.github.com/reactseed/reactseed"
   },
   "copyright": {
     "message": "Copyright © 2021 Reactseed.",

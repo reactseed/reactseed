@@ -4,7 +4,7 @@ title: About the Documentation
 sidebar_label: About Docs
 ---
 
-Welcome to the React Seed documentation!
+Welcome to the `Reactseed` documentation!
 
 ## Navigation
 
@@ -14,7 +14,7 @@ You can find different topics in the table of contents. On desktop, you should s
 
 The documentation for React itself is located on a separate website: **[reactjs.org](https://reactjs.org/)**.
 
-This website is only about React Seed.
+This website is only about `Reactseed`.
 
 ## Something Missing?
 

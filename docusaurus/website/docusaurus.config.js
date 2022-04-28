@@ -39,9 +39,9 @@ const siteConfig = {
       indexName: "reactseed",
       appId: "EQ0VKW0MTR",
     },
-    scrollToTop:true,
+    scrollToTop: true,
     colors: {
-      primaryColor: '#006eff'
+      primaryColor: "#006eff",
     },
     navbar: {
       title: "Reactseed",
@@ -50,15 +50,19 @@ const siteConfig = {
         src: "img/logo.svg",
       },
       items: [
-        { to: "docs/getting-started", label: "Documentation", position: "right" },
+        {
+          to: "docs/getting-started",
+          label: "Documentation",
+          position: "right",
+        },
         {
           href: "https://www.github.com/reactseed/reactseed",
           label: "GitHub",
           position: "right",
         },
         {
-          type: 'localeDropdown',
-          position: 'right',
+          type: "localeDropdown",
+          position: "right",
         },
       ],
     },
@@ -83,7 +87,7 @@ const siteConfig = {
           items: [
             {
               label: "GitHub Discussions",
-              href: "https://github.com/reactseed/reactseed/discussions",
+              href: "https://github.com/reactseed/reactseed/issues",
             },
           ],
         },
@@ -92,7 +96,7 @@ const siteConfig = {
           items: [
             {
               label: "GitHub",
-              href: "https://www.github.com/reactseed/creactseed",
+              href: "https://www.github.com/reactseed/reactseed",
             },
           ],
         },
@@ -105,14 +109,14 @@ const siteConfig = {
     },
   },
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'zh-cn'],
+    defaultLocale: "en",
+    locales: ["en", "zh-cn"],
     localeConfigs: {
       en: {
-        label: 'English',
+        label: "English",
       },
-      'zh-cn': {
-        label: '简体中文',
+      "zh-cn": {
+        label: "简体中文",
       },
     },
   },

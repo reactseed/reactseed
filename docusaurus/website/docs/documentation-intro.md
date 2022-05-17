@@ -4,7 +4,7 @@ title: About the Documentation
 sidebar_label: About Docs
 ---
 
-Welcome to the `Reactseed` documentation!
+Welcome to the `Reactseed` documentation! `Reactseed` based on `create-react-app`, So most of the documentation comes from [https://create-react-app.dev](https://create-react-app.dev).
 
 ## Navigation
 

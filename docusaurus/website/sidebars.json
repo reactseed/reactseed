@@ -7,6 +7,23 @@
       "available-scripts",
       "supported-browsers-features",
       "updating-to-new-releases"
-    ]
+    ],
+    "Development": ["analyzing-the-bundle-size", "using-https-in-development"],
+    "Styles and Assets": [
+      "adding-a-stylesheet",
+      "adding-a-css-modules-stylesheet",
+      "adding-images-fonts-and-files",
+      "using-the-public-folder",
+      "code-splitting"
+    ],
+    "Building your App": [
+      "adding-a-router",
+      "adding-custom-environment-variables",
+      "measuring-performance",
+      "production-build"
+    ],
+    "Testing": ["running-tests", "debugging-tests"],
+    "Back-End Integration": ["proxying-api-requests-in-development"],
+    "Deployment": ["deployment"]
   }
 }

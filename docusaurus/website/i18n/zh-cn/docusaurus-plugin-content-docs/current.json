@@ -10,5 +10,29 @@
   "sidebar.docs.category.Getting Started": {
     "message": "开始使用",
     "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Development": {
+    "message": "开发",
+    "description": "The label for category Development in sidebar docs"
+  },
+  "sidebar.docs.category.Styles and Assets": {
+    "message": "样式与素材",
+    "description": "The label for category Styles and Assets in sidebar docs"
+  },
+  "sidebar.docs.category.Building your App": {
+    "message": "构建应用",
+    "description": "The label for category Building your App in sidebar docs"
+  },
+  "sidebar.docs.category.Testing": {
+    "message": "测试",
+    "description": "The label for category Testing in sidebar docs"
+  },
+  "sidebar.docs.category.Back-End Integration": {
+    "message": "后端集成",
+    "description": "The label for category Back-End Integration in sidebar docs"
+  },
+  "sidebar.docs.category.Deployment": {
+    "message": "部署",
+    "description": "The label for category Deployment in sidebar docs"
   }
 }

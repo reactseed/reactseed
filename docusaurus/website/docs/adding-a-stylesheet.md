@@ -18,7 +18,7 @@ This project setup uses [webpack](https://webpack.js.org/) for handling all asse
 
 ```tsx
 import React, { Component } from "react";
-import "./Button.css"; // Tell webpack that Button.js uses these styles
+import "./Button.css"; // Tell webpack that Button.tsx uses these styles
 
 class Button extends Component {
   render() {

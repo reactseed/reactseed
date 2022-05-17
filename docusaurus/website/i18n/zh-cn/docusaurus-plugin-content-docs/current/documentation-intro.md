@@ -4,7 +4,7 @@ title: 关于文档
 sidebar_label: 关于文档
 ---
 
-欢迎使用 `Reactseed` 文档！
+欢迎使用 `Reactseed` 文档！`Reactseed`基于`create-react-app`，所以大部分文档来自 [https://create-react-app.dev](https://create-react-app.dev)。
 
 ## 导航
 

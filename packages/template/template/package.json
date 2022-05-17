@@ -16,6 +16,7 @@
     "commit": "git cz",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "eslint": "eslint --fix --no-error-on-unmatched-pattern 'src/**/*.{ts,tsx}'",
+    "test:debug": "craco --inspect-brk test --runInBand --no-cache",
     "stylelint": "stylelint 'src/**/*.less' --custom-syntax postcss-less --allow-empty-input"
   },
   "browserslist": {

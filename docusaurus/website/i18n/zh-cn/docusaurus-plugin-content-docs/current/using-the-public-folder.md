@@ -5,7 +5,7 @@ title: 使用 public 文件夹
 
 ## 更改 HTML
 
-`public` 文件夹包含 HTML 文件，因此您可以对其进行调整，例如，[设置页面标题](title-and-meta-tags.md)。
+`public` 文件夹包含 HTML 文件，因此您可以对其进行调整。
 编译代码的`<script>`标签将在构建过程中自动添加到其中。
 
 ## 在模块系统之外添加资源
@@ -60,5 +60,3 @@ render() {
 - 您有成千上万的图像，需要动态引用它们的路径。
 - 您想在捆绑代码之外包含一个小脚本，例如 [`pace.js`](https://github.com/CodeByZach/pace)。
 - 某些库可能与 webpack 不兼容，您别无选择，只能将其包含为 `<script>` 标记。
-
-请注意，如果添加声明全局变量的 `<script>`，则应阅读下一节中的主题 [使用全局变量](using-global-variables.md)，该主题解释了如何引用它们。

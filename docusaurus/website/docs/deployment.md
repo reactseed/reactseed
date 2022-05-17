@@ -83,7 +83,7 @@ If you’re using [Apache Tomcat](https://tomcat.apache.org/), you need to follo
 
 Now requests to `/todos/42` will be handled correctly both in development and in production.
 
-On a production build, and when you've [opted-in](making-a-progressive-web-app.md#why-opt-in),
+On a production build,
 a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) will automatically handle all navigation requests, like for
 `/todos/42`, by serving the cached copy of your `index.html`. This
 service worker navigation routing can be configured or disabled by

@@ -82,7 +82,7 @@ app.listen(9000);
 
 现在对`/todos/42`的请求将在开发和生产中得到正确处理。
 
-在生产版本中，当您 [opted-in](making-a-progressive-web-app.md#why-opt-in) 时，
+在生产版本中，
 [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) 将自动处理所有导航请求，例如
 `/all/42`，通过提供 `index.html` 的缓存副本。可以通过以下方式配置或禁用此 Service Worker 导航路由
 [`eject`ing](available-scripts.md#npm-run-eject) 然后修改

@@ -9,7 +9,7 @@ title: 环境变量
 >
 > 环境变量嵌入到构建中，这意味着任何人都可以通过检查您的应用程序文件来查看它们。
 
-**环境变量在构建时嵌入**。由于`Reactseed` 生成一个静态 HTML/CSS/JS 包，它不可能在运行时读取它们。要在运行时读取它们，您需要将 HTML 加载到服务器上的内存中并在运行时替换占位符，如 [此处所述](title-and-meta-tags.md#injecting-data-from-the-server-into-the-page）。或者，您可以随时更改服务器上的应用程序来重建它们。
+**环境变量在构建时嵌入**。由于`Reactseed` 生成一个静态 HTML/CSS/JS 包，它不可能在运行时读取它们。要在运行时读取它们，您需要将 HTML 加载到服务器上的内存中并在运行时替换占位符。或者，您可以随时更改服务器上的应用程序来重建它们。
 
 > 注意：您必须创建以 `REACT_APP_` 开头的自定义环境变量。除了 `NODE_ENV` 之外的任何其他变量都将被忽略，以避免意外[在可能具有相同名称的机器上暴露私钥](https://github.com/facebook/create-react-app/issues/865#issuecomment-252199527)。更改任何环境变量都需要您重新启动正在运行的开发服务器。
 
@@ -74,7 +74,7 @@ if (process.env.NODE_ENV !== "production") {
 请注意，上述部分的注意事项适用：
 
 - 除了一些内置变量（`NODE_ENV` 和 `PUBLIC_URL`），变量名必须以 `REACT_APP_` 开头才能工作。
-- 环境变量在构建时注入。 如果您需要在运行时注入它们，[请改用此方法](title-and-meta-tags.md#generating-dynamic-meta-tags-on-the-server)。
+- 环境变量在构建时注入。
 
 ## 在 Shell 中添加临时环境变量
 

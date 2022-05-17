@@ -7,7 +7,7 @@ title: 添加图片、字体、文件
 
 您可以在 JavaScript 模块中**`import` 一个文件**。这告诉 webpack 将该文件包含在包中。与 CSS 导入不同，导入文件会为您提供一个字符串值。该值是您可以在代码中引用的最终路径，例如作为图像的 `src`属性或 PDF 链接的 `href`。
 
-为了减少对服务器的请求数量，导入小于 `10,000` 字节的图像会返回 [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)的一条路径。这适用于以下文件扩展名：bmp、gif、jpg、jpeg 和 png。由于 [#1153](https://github.com/facebook/create-react-app/issues/1153)，SVG 文件被排除在外。您可以通过设置 `IMAGE_INLINE_SIZE_LIMIT` 环境变量来控制 `10,000` 字节阈值，如我们的 [高级配置](advanced-configuration.md) 中所述。
+为了减少对服务器的请求数量，导入小于 `10,000` 字节的图像会返回 [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)的一条路径。这适用于以下文件扩展名：bmp、gif、jpg、jpeg 和 png。由于 [#1153](https://github.com/facebook/create-react-app/issues/1153)，SVG 文件被排除在外。您可以通过设置 `IMAGE_INLINE_SIZE_LIMIT` 环境变量来控制 `10,000` 字节阈值。
 
 Here is an example:
 

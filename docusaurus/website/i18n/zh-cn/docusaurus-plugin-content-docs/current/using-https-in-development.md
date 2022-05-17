@@ -3,7 +3,7 @@ id: using-https-in-development
 title: 使用 HTTPS
 ---
 
-您可能需要开发服务器通过 `HTTPS` 提供页面。这可能有用的一种特殊情况是，当 API 服务器本身服务于 `HTTPS` 时，使用 [代理](proxying-api-requests-in-developmen) 将请求代理到 API 服务器。
+您可能需要开发服务器通过 `HTTPS` 提供页面。这可能有用的一种特殊情况是，当 API 服务器本身服务于 `HTTPS` 时，使用 [代理](proxying-api-requests-in-development) 将请求代理到 API 服务器。
 
 为此，请将 `HTTPS` 环境变量设置为 `true`，然后像往常一样使用 `npm start` 启动开发服务器：
 

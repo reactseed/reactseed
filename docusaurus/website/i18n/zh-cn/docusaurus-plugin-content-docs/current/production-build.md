@@ -17,7 +17,7 @@ title: 构建生产版本
 
 `runtime-main.[hash].js`
 
-- 这是 [webpack 运行时](https://webpack.js.org/configuration/optimization/#optimization-runtimechunk) 逻辑的一小部分，用于加载和运行您的应用程序。默认情况下，此内容将嵌入到您的 `build/index.html` 文件中，以保存额外的网络请求。您可以通过在我们的 [高级配置](advanced-configuration.md) 中指定 `INLINE_RUNTIME_CHUNK=false` 来选择退出，这将加载此块而不是将其嵌入到您的 `index.html` 中。
+- 这是 [webpack 运行时](https://webpack.js.org/configuration/optimization/#optimization-runtimechunk) 逻辑的一小部分，用于加载和运行您的应用程序。默认情况下，此内容将嵌入到您的 `build/index.html` 文件中，以保存额外的网络请求。您可以通过在我们的 `高级配置` 中指定 `INLINE_RUNTIME_CHUNK=false` 来选择退出，这将加载此块而不是将其嵌入到您的 `index.html` 中。
 
 如果您使用 [代码拆分](code-splitting.md) 来拆分您的应用程序，这也会在 `build/static` 文件夹中创建额外的块。
 

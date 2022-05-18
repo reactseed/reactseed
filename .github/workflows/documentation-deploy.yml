@@ -1,6 +1,9 @@
 name: Delpoy the documentation to surge
 on: 
   push:
+    branches:
+      - main
+      - dev
     paths:    
       - 'docusaurus/**'
 jobs:
@@ -11,11 +14,11 @@ jobs:
         shell: bash
         working-directory: docusaurus/website
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
         run: npm install

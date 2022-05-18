@@ -14,7 +14,7 @@
     "release:next": "lerna publish prerelease --pre-dist-tag=next --preid=next",
     "release:preminor": "lerna publish preminor --pre-dist-tag=next --preid=next",
     "release:premajor": "lerna publish premajor --pre-dist-tag=next --preid=next",
-    "publish": "lerna publish from-package --yes",
+    "publish": "lerna publish from-package --yes --no-verify-access",
     "release:minor": "lerna publish minor",
     "release:major": "lerna publish major",
     "ls": "lerna list",

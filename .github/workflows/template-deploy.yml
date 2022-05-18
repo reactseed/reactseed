@@ -1,7 +1,14 @@
 name: Delpoy the template to surge
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+      - dev
+    paths:    
+      - 'packages/template/template'
+      - 'packages/template-antd/template'
+      - 'packages/template-antd-i18n/template'
+      - 'packages/template-antd-vite/template'
 jobs:
   deploy-template:
     runs-on: ubuntu-latest
@@ -10,14 +17,14 @@ jobs:
         shell: bash
         working-directory: packages/template/template
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
       - name: Build for production
         run: npm run build
       - name: Install surge
@@ -31,14 +38,14 @@ jobs:
         shell: bash
         working-directory: packages/template-antd/template
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
       - name: Build for production
         run: npm run build
       - name: Install surge
@@ -52,17 +59,38 @@ jobs:
         shell: bash
         working-directory: packages/template-antd-i18n/template
     steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: Setup node.js environment
           uses: actions/setup-node@v2.1.2
           with:
-            node-version: 12
+            node-version: 16
             registry-url: https://registry.npmjs.org
         - name: Install dependencies
-          run: npm install
+          run: npm install --force
         - name: Build for production
           run: npm run build
         - name: Install surge
           run: npm install -g surge
         - name: Deploy to surge
           run: surge ./build https://reactseed-template-antd-i18n.surge.sh --token ${{secrets.SURGE_TOKEN}}
+  deploy-template-antd-vite:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: packages/template-antd-vite/template
+    steps:
+        - uses: actions/checkout@v3
+        - name: Setup node.js environment
+          uses: actions/setup-node@v2.1.2
+          with:
+            node-version: 16
+            registry-url: https://registry.npmjs.org
+        - name: Install dependencies
+          run: npm install --force
+        - name: Build for production
+          run: npm run build
+        - name: Install surge
+          run: npm install -g surge
+        - name: Deploy to surge
+          run: surge ./build https://reactseed-template-antd-vite.surge.sh --token ${{secrets.SURGE_TOKEN}}

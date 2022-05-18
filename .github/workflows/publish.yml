@@ -1,10 +1,9 @@
 name: publish
 on:
-  # When Release Pull Request is merged
   push:
     branches:
-      - dev
       - main
+      - dev
 env:
   CI: true
 jobs:
@@ -12,33 +11,16 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Git Identity
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
       - name: Authenticate with Registry
         run: |
-          node -v
-          npm -v
-          yarn logout
           echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          cat ~/.npmrc
-          npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}    
-      - name: Install
-        run: yarn install
-      - name: Publish
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      - name: Install dependencies
+        run: |
+          npm install yarn -g
+          yarn install
+      - name: Publish NPM
         run: |
           npm run build
           npm run publish
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

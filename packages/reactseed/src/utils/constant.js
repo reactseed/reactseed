@@ -28,6 +28,7 @@ const templateList = [
 const registry = 'https://registry.npmjs.org';
 const registryCN = 'https://registry.npm.taobao.org';
 const downloadTempPath = '.reactseed';
+
 module.exports = {
   templateMap,
   registry,

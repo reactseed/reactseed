@@ -12,6 +12,7 @@ const initLocalTemplate = async (localPath, appName) => {
   logger.info('localPath: ', localPath);
   const cwd = path.resolve('.');
   const filePath = localPath.replace('file:', '');
+  console.log(filePath);
   const exists = await fs.pathExists(filePath);
   const toPath = path.resolve(cwd, appName);
 

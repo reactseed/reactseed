@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/devserver",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Override webpack devServer",
   "main": "index.js",
   "scripts": {

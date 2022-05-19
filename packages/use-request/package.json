@@ -1,6 +1,6 @@
 {
   "name": "@reactseed/use-request",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Use request with a React hooks",
   "main": "lib/index.js",
   "scripts": {

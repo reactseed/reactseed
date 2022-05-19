@@ -1,7 +1,6 @@
 ---
 id: proxying-api-requests-in-development
-title: Proxying API Requests in Development
-sidebar_label: Proxying in Development
+title: 开发环境 API 代理
 ---
 
 人们经常从与后端实现相同的主机和端口为前端 React 应用程序提供服务。

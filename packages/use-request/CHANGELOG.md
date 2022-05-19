@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2022-05-19)
+
+
+### Bug Fixes
+
+* fix publish config. update userequest ([fcd62a7](https://github.com/reactseed/reactseed/commit/fcd62a72a4279fa4c75270d772bcccfa97bbdcfd))
+* update @reactseed/use-request axios version ([271b42d](https://github.com/reactseed/reactseed/commit/271b42d85c629fd0d54ee74222019a6b199a9262))
+* update @reactseed/use-request axios version ([b94ecf7](https://github.com/reactseed/reactseed/commit/b94ecf740b31b389c3d6af0636588cb71636c871))
+
+
+### Features
+
+* support hot mock ([a096e75](https://github.com/reactseed/reactseed/commit/a096e75f0157433f9fbc91809b770294f08c699d))
+* vite template ([a18b0ab](https://github.com/reactseed/reactseed/commit/a18b0ab60fa40375f66ac6d7f374e79d92904668))
+
+
+
+
+
 # 1.1.0 (2022-04-27)
 
 

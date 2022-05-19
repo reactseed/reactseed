@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/reactseed/reactseed/compare/@reactseed/cli@1.4.0...@reactseed/cli@1.5.0) (2022-05-19)
+
+
+### Features
+
+* upgrading template husky ([04c8009](https://github.com/reactseed/reactseed/commit/04c8009bdc306570b4d377c32b4bf3ac6a7b404d))
+
+
+
+
+
 # [1.4.0](https://github.com/reactseed/reactseed/compare/@reactseed/cli@1.3.0...@reactseed/cli@1.4.0) (2022-04-27)
 
 

@@ -22,7 +22,8 @@
     "commit": "git cz",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "eslint": "eslint --fix --no-error-on-unmatched-pattern 'src/**/*.{ts,tsx}'",
-    "stylelint": "stylelint 'src/**/*.less' --custom-syntax postcss-less --allow-empty-input"
+    "stylelint": "stylelint 'src/**/*.less' --custom-syntax postcss-less --allow-empty-input",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -41,16 +42,9 @@
       "npm run eslint",
       "npm run prettier"
     ],
-    "*.{less}": [
+    "*.{css,less}": [
       "npm run stylelint"
     ]
-  },
-  "pre-commit": "lint-staged",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS --verbose --no-verify"
-    }
   },
   "commitlint": {
     "extends": [
@@ -63,8 +57,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "@craco/craco": "^7.0.0-alpha.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -79,12 +73,12 @@
     "antd-dayjs-webpack-plugin": "^1.0.6",
     "babel-plugin-import": "^1.13.5",
     "craco-alias": "^3.0.1",
-    "craco-less": "^2.0.0",
+    "craco-less": "^2.1.0-alpha.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.3.8",
     "mocker-api": "^2.9.5",
     "postcss-less": "^6.0.0",

@@ -104,7 +104,7 @@ const downloadTemplate = async (packageName, savePath) => {
 const downloadFromGit = async (gitUrl, savePath) => {
   await rimraf(savePath);
   fs.mkdirSync(savePath);
-  // 下载git库代码
+
   execSync(`cd ${savePath} && git clone ${gitUrl}`);
   logger.success('success! cd', path.join(process.cwd(), savePath));
 };

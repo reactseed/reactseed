@@ -12,7 +12,6 @@ const initLocalTemplate = async (localPath, appName) => {
   logger.info('localPath: ', localPath);
   const cwd = path.resolve('.');
   const filePath = localPath.replace('file:', '');
-  console.log(filePath);
   const exists = await fs.pathExists(filePath);
   const toPath = path.resolve(cwd, appName);
 
@@ -40,7 +39,19 @@ const initLocalTemplate = async (localPath, appName) => {
         fs.writeFileSync(file, replaceData);
       });
 
+      const commitmsg = toPath + path.sep + '.husky/commit-msg';
+      const precommit = toPath + path.sep + '.husky/pre-commit';
+      await fs.chmod(commitmsg, 0o775, (err) => {
+        if (err) throw err;
+        logger.info('chmod +x ', chalk.green(commitmsg));
+      });
+      await fs.chmod(precommit, 0o775, (err) => {
+        if (err) throw err;
+        logger.info('chmod +x ', chalk.green(precommit));
+      });
+
       logger.info(chalk.cyan('⌛  (3/3) Installing dependencies...'));
+
       await yarn.run(toPath, 'install');
       process.chdir(`./${appName}`);
 
@@ -48,8 +59,15 @@ const initLocalTemplate = async (localPath, appName) => {
         `Success! Created ${chalk.cyan(appName)} at ${chalk.green(toPath)}`
       );
       logger.info('We suggest that you begin by typing:');
-      logger.info(`  ${chalk.cyan('cd')} ${appName}`);
+      logger.info(`  ${chalk.cyan('cd')} ${chalk.green(appName)}`);
       logger.info(`  ${chalk.cyan('yarn start')}`);
+      logger.info(
+        `To initialize ${chalk.green('Git')} and ${chalk.green(
+          'Husky'
+        )}, you can run:`
+      );
+      logger.info(`  ${chalk.cyan('git init')}`);
+      logger.info(`  ${chalk.cyan('npm run prepare')}`);
     } else {
       console.error(chalk.red('path is not directory'));
     }

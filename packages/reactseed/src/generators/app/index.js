@@ -60,7 +60,6 @@ module.exports = class extends Generator {
 
   async prompting() {
     logger.info(`Welcome to the React Seed!`);
-    console.log(process.cwd());
     const answers = await this.prompt([
       {
         type: 'input',
@@ -212,6 +211,18 @@ module.exports = class extends Generator {
       mkdirp.sync(path.dirname(to));
       fs.writeFileSync(to, result);
     });
+
+    const commitmsg = path.join(targetDir, '.husky/commit-msg');
+    const precommit = path.join(targetDir, '.husky/pre-commit');
+    await fs.chmod(commitmsg, 0o775, (err) => {
+      if (err) throw err;
+      logger.info('chmod +x ', chalk.green(commitmsg));
+    });
+    await fs.chmod(precommit, 0o775, (err) => {
+      if (err) throw err;
+      logger.info('chmod +x ', chalk.green(precommit));
+    });
+
     return files;
   }
 
@@ -264,9 +275,16 @@ module.exports = class extends Generator {
     );
     logger.info('We suggest that you begin by typing:');
     if (!this.isCurrentDir) {
-      logger.info(`  ${chalk.cyan(`cd ${this.answers.appName}`)}`);
+      logger.info(`  ${chalk.cyan(`cd ${chalk.green(this.answers.appName)}`)}`);
     }
     logger.info(`  ${chalk.cyan(`${useYarn ? 'yarn' : 'npm'} start`)}`);
+    logger.info(
+      `To initialize ${chalk.green('Git')} and ${chalk.green(
+        'Husky'
+      )}, you can run:`
+    );
+    logger.info(`  ${chalk.cyan('git init')}`);
+    logger.info(`  ${chalk.cyan('npm run prepare')}`);
     logger.info('\n');
   }
 };

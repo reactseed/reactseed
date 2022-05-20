@@ -19,7 +19,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
-        run: rm -rf .husky && npm install --force
+        run: git init && npm install --force
       - name: Build for production
         run: npm run build
       - name: Install surge
@@ -40,7 +40,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
-        run: rm -rf .husky && npm install --force
+        run: git init && npm install --force
       - name: Build for production
         run: npm run build
       - name: Install surge
@@ -61,7 +61,7 @@ jobs:
             node-version: 16
             registry-url: https://registry.npmjs.org
         - name: Install dependencies
-          run: rm -rf .husky && npm install --force
+          run: git init && npm install --force
         - name: Build for production
           run: npm run build
         - name: Install surge
@@ -82,7 +82,7 @@ jobs:
             node-version: 16
             registry-url: https://registry.npmjs.org
         - name: Install dependencies
-          run: rm -rf .husky && npm install --force
+          run: git init && npm install --force
         - name: Build for production
           run: npm run build
         - name: Install surge

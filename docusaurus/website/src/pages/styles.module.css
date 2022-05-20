@@ -4,7 +4,9 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
+:root {
+  --ifm-table-cell-padding: 0.5em;
+}
 .heroBanner {
   text-align: center;
   background-color: #f5f8fa;
@@ -82,11 +84,11 @@
   width: 1220px;
 }
 
-html[data-theme='dark'] .featureHr {
+html[data-theme="dark"] .featureHr {
   border-bottom: 1px solid #1f232a;
 }
 
-html[data-theme='dark'] .features h2 {
+html[data-theme="dark"] .features h2 {
   color: #fff;
 }
 
@@ -130,7 +132,7 @@ html[data-theme='dark'] .features h2 {
 }
 
 .heroBannerInner::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -177,22 +179,22 @@ html[data-theme='dark'] .features h2 {
   }
 }
 
-html[data-theme='dark'] .heroBanner {
+html[data-theme="dark"] .heroBanner {
   background-color: var(--ifm-background-color);
 }
 
-html[data-theme='dark'] .heroSubTitle {
+html[data-theme="dark"] .heroSubTitle {
   color: #fff;
 }
 
-html[data-theme='dark'] .heroButton {
+html[data-theme="dark"] .heroButton {
   color: var(--ifm-background-color);
 }
 
-html[data-theme='dark'] .heroBannerInner::before {
+html[data-theme="dark"] .heroBannerInner::before {
   opacity: 0.05;
 }
 
-html[data-theme='dark'] .features p {
+html[data-theme="dark"] .features p {
   color: #fff;
 }

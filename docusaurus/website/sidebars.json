@@ -6,6 +6,7 @@
       "folder-structure",
       "available-scripts",
       "supported-browsers-features",
+      "supported-reactseed-features",
       "updating-to-new-releases"
     ],
     "Development": ["analyzing-the-bundle-size", "using-https-in-development"],

@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - dev
+env:
+  CI: false
 jobs:
   deploy-template:
     runs-on: ubuntu-latest

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/reactseed/reactseed/compare/@reactseed/template-antd-i18n@2.3.1...@reactseed/template-antd-i18n@2.4.0) (2023-03-01)
+
+
+### Features
+
+* upgrade dependencies. add app info page ([efd4b23](https://github.com/reactseed/reactseed/commit/efd4b2322f724b1afb8522c2bad775bb8dee0c26))
+
+
+
+
+
 ## [2.3.1](https://github.com/reactseed/reactseed/compare/@reactseed/template-antd-i18n@2.3.0...@reactseed/template-antd-i18n@2.3.1) (2022-05-19)
 
 **Note:** Version bump only for package @reactseed/template-antd-i18n

@@ -1,25 +1,24 @@
 import { Table } from 'antd';
-import { useRequest } from '@/hooks';
+import useAxios from 'axios-hooks';
 
-interface TQueryUserParams {
-  current?: number;
-  pageSize?: number;
+interface IQueryUserRequest {
+  page: number;
+  results: number;
 }
 
-interface TUser {
-  gender?: string;
-  email?: string;
-  name?: any;
+interface IResultItem {
+  gender: string;
+  email: string;
+  name: string;
+  login: {
+    uuid: string;
+  };
   [key: string]: any;
 }
 
-const queryUser = (data: TQueryUserParams) => ({
-  url: 'https://randomuser.me/api',
-  data: {
-    page: data.current,
-    results: data.pageSize,
-  },
-});
+interface IQueryUserResponse {
+  results: IResultItem[];
+}
 
 const columns = [
   {
@@ -43,28 +42,25 @@ const columns = [
 ];
 
 const UserPage = () => {
-  const { data, loading, pagination } = useRequest<any, TUser>(queryUser, {
-    paginated: true,
-    formatResult: data => ({
-      list: data.results,
-      total: 200,
-    }),
+  const [{ data, loading }] = useAxios<IQueryUserResponse, IQueryUserRequest>({
+    url: 'https://randomuser.me/api',
+    params: {
+      page: 1,
+      results: 100,
+    },
   });
 
   return (
     <>
       <p style={{ marginBottom: 16 }}>
-        This is an example using <b>useRequest</b>，See the section about&nbsp;
-        <a href="https://github.com/reactseed/use-request">
-          @reactseed/use-request
-        </a>
+        This is an example using <b>axios-hooks</b>，See the section about&nbsp;
+        <a href="https://github.com/simoneb/axios-hooks">axios-hooks</a>
         &nbsp;for more information.
       </p>
-      <Table
+      <Table<IResultItem>
         columns={columns}
         rowKey={record => record.login.uuid}
-        dataSource={data?.list}
-        pagination={pagination}
+        dataSource={data?.results}
         loading={loading}
       />
     </>

@@ -1,6 +1,6 @@
 import CracoLess from 'craco-less';
 import CracoAlias from 'craco-alias';
-import type { CracoConfig } from '@craco/craco';
+import type { CracoConfig } from 'craco__craco';
 
 const config: CracoConfig = {
   plugins: [

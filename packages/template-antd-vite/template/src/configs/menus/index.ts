@@ -18,12 +18,16 @@ const menus: Route[] = [
     icon: 'other',
     children: [
       {
+        path: '/app-info',
+        name: 'App Info (api mock)',
+      },
+      {
         path: '/hello',
-        name: 'Hello (useRedux)',
+        name: 'Hello (zustand)',
       },
       {
         path: '/user',
-        name: 'User (useRequest)',
+        name: 'User (axios)',
       },
       {
         path: '/simple',

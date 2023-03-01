@@ -11,14 +11,14 @@ import ProBasicLayout, {
   MenuDataItem,
   SettingDrawerProps,
 } from '@ant-design/pro-layout';
-import { Dropdown, Menu } from 'antd';
+import { Dropdown } from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocation } from '@/hooks';
 import { isDevelopEnv } from '@/utils';
 import { menus, menuIcon, language, languages, config } from '@/configs';
 import defaultSettings from '@/defaultSettings';
 import { ConfigContext } from '@/utils/context';
-import type { MenuProps } from 'antd/es/menu';
+import type { MenuProps } from 'antd';
 import styles from './index.module.less';
 
 const renderMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
@@ -77,16 +77,18 @@ const BasicLayout: React.FC = props => {
 
   const rightContentRender = () => (
     <Dropdown
-      overlay={
-        <Menu>
-          {languages.map(item => (
-            <Menu.Item key={item.key} onClick={() => setLanguage(item.key)}>
+      menu={{
+        items: languages.map(item => ({
+          key: item.key,
+          onClick: () => setLanguage(item.key),
+          label: (
+            <>
               <span className={styles.headerFlag}>{item.flag}</span>
               {item.value}
-            </Menu.Item>
-          ))}
-        </Menu>
-      }
+            </>
+          ),
+        })),
+      }}
     >
       <div className={styles.headerButton}>
         <span className={styles.headerFlag}>{currentLanguage.flag}</span>
@@ -105,6 +107,9 @@ const BasicLayout: React.FC = props => {
         menuItemRender={menuItemRender}
         menuProps={menuProps}
         rightContentRender={rightContentRender}
+        token={{
+          bgLayout: '#fff',
+        }}
       >
         {props.children}
       </ProBasicLayout>

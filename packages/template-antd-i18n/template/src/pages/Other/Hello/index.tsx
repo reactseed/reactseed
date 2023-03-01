@@ -5,7 +5,7 @@ const Hello = () => {
   const { age, name, becomeOlder, updateName } = useStore();
 
   return (
-    <>
+    <div>
       <p style={{ marginBottom: 16 }}>
         This is an example using <b>zustand</b>，See the section about&nbsp;
         <a href="https://github.com/pmndrs/zustand">zustand</a>
@@ -24,7 +24,7 @@ const Hello = () => {
         value={name}
       />
       <Button onClick={becomeOlder}>Older</Button>
-    </>
+    </div>
   );
 };
 

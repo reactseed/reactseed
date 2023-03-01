@@ -1,22 +1,11 @@
 import CracoLess from 'craco-less';
 import CracoAlias from 'craco-alias';
-import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';
-import type { CracoConfig } from '@craco/craco';
+import type { CracoConfig } from 'craco__craco';
 
 const config: CracoConfig = {
   plugins: [
     {
       plugin: CracoLess,
-      options: {
-        lessLoaderOptions: {
-          lessOptions: {
-            modifyVars: {
-              hack: `true; @import "@/themes/antd.default.less";`,
-            },
-            javascriptEnabled: true,
-          },
-        },
-      },
     },
     {
       plugin: CracoAlias,
@@ -27,14 +16,6 @@ const config: CracoConfig = {
       },
     },
   ],
-  webpack: {
-    plugins: {
-      add: [new AntdDayjsWebpackPlugin()],
-    },
-  },
-  babel: {
-    plugins: [['import', { libraryName: 'antd', style: true }]],
-  },
 };
 
 export default config;

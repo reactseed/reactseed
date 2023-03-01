@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import type { RouteProps } from '@/typings';
 
 const Home = lazy(() => import('@/pages/Home'));
+const AppInfo = lazy(() => import('@/pages/Other/AppInfo'));
 const Hello = lazy(() => import('@/pages/Other/Hello'));
 const User = lazy(() => import('@/pages/Other/User'));
 const Simple = lazy(() => import('@/pages/Other/Simple'));
@@ -12,6 +13,10 @@ const routes: RouteProps[] = [
   {
     element: <Home />,
     index: true,
+  },
+  {
+    path: '/app-info',
+    element: <AppInfo />,
   },
   {
     path: '/hello',

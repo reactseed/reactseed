@@ -1,11 +1,5 @@
 import { Route } from '@/typings/router';
 
-/*
- * Note:
- * Menu items with children need to set a key starting with "/"
- * @see https://github.com/umijs/route-utils/blob/master/src/transformRoute/transformRoute.ts#L219
- */
-
 const menus: Route[] = [
   {
     path: '/',
@@ -18,12 +12,16 @@ const menus: Route[] = [
     icon: 'other',
     children: [
       {
+        path: '/app-info',
+        name: 'App Info (api mock)',
+      },
+      {
         path: '/hello',
-        name: 'Hello (useRedux)',
+        name: 'Hello (zustand)',
       },
       {
         path: '/user',
-        name: 'User (useRequest)',
+        name: 'User (axios)',
       },
       {
         path: '/simple',
